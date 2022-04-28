@@ -1,9 +1,16 @@
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
-E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csprojResolveAssemblyReference.cache
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.GenerateResource.Cache
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMain.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csprojAssemblyReference.cache
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.CoreCompileInputs.cache
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyNhanVien.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyDocGia.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyMuonTra.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLySach.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlThongTinQuanTri.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlThongTinThuThu.resources

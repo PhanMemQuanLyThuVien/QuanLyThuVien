@@ -16,5 +16,42 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
+
+        private void btnQuanLySach_Click(object sender, EventArgs e)
+        {
+            addUserControl(new UserCtrlQuanLySach());
+        }
+
+        private void btnQuanLyMuonTra_Click(object sender, EventArgs e)
+        {
+            addUserControl(new UserCtrlQuanLyMuonTra());
+        }
+
+        private void btnQuanLyDocGia_Click(object sender, EventArgs e)
+        {
+            addUserControl(new UserCtrlQuanLyDocGia());
+        }
+
+        private void btnThongTinQuanTri_Click(object sender, EventArgs e)
+        {
+            addUserControl(new UserCtrlThongTinQuanTri());
+        }
+
+        private void btnThongTinThuThu_Click(object sender, EventArgs e)
+        {
+            addUserControl(new UserCtrlThongTinThuThu());
+        }
+
+        private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            addUserControl(new UserCtrlQuanLyNhanVien());
+        }
+
+        private void addUserControl(UserControl userCtrl)
+        {
+            userCtrl.Dock = DockStyle.Fill;
+            pnChucNang.Controls.Clear();
+            pnChucNang.Controls.Add(userCtrl);
+        }
     }
 }
