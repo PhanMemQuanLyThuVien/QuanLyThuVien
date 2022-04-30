@@ -4,3 +4,4 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\bin\Debug\DTO.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.dll
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.pdb
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.csprojAssemblyReference.cache

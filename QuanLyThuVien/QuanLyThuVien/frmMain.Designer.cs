@@ -141,6 +141,7 @@ namespace QuanLyThuVien
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Thư Viện";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.toolStripQuanLy.ResumeLayout(false);
             this.toolStripQuanLy.PerformLayout();
             this.ResumeLayout(false);

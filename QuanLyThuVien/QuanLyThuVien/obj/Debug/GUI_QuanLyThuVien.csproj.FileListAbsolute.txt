@@ -14,3 +14,12 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\Qua
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLySach.resources
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlThongTinQuanTri.resources
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlThongTinThuThu.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmLogin.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\BLL.dll
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO.dll
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DAL.dll
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\BLL.pdb
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO.pdb
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO.dll.config
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DAL.pdb
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.CopyComplete

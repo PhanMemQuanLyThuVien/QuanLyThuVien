@@ -12,8 +12,12 @@ namespace QuanLyThuVien
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        private frmLogin frmlogin;
+        private string emailNhanVien;
+        public frmMain(frmLogin frmlogin, string emailNV)
         {
+            this.frmlogin = frmlogin;
+            this.emailNhanVien = emailNV;
             InitializeComponent();
         }
 
@@ -52,6 +56,11 @@ namespace QuanLyThuVien
             userCtrl.Dock = DockStyle.Fill;
             pnChucNang.Controls.Clear();
             pnChucNang.Controls.Add(userCtrl);
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmlogin.Close();
         }
     }
 }
