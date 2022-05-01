@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyThuVien
 {
-    public partial class UserCtrlQuanLyNhanVien : UserControl
+    public partial class UserCtrlQuanLyThuThu : UserControl
     {
-        public UserCtrlQuanLyNhanVien()
+        public UserCtrlQuanLyThuThu()
         {
             InitializeComponent();
         }

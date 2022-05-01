@@ -18,5 +18,12 @@ namespace BLL
                 return false;
             return true;
         }
+
+        public string getMaChucVuTaiKhoan(string email)
+        {
+            //mã 1: Quản lý
+            //mã 2: Thủ thư
+            return dALTaiKhoan.getTaiKhoan(email).CHUCVU.ToString();
+        }
     }
 }

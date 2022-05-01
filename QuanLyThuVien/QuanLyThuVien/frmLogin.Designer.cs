@@ -63,6 +63,7 @@
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(208, 37);
             this.txtTaiKhoan.TabIndex = 8;
+            this.txtTaiKhoan.Text = "lamchikhang.it@gmail.com";
             // 
             // txtMatKhau
             // 
@@ -72,10 +73,11 @@
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(208, 37);
             this.txtMatKhau.TabIndex = 9;
+            this.txtMatKhau.Text = "lamchikhang.it@gmail.com";
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.Black;
+            this.btnDangNhap.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(280, 197);
@@ -88,7 +90,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.Black;
+            this.btnThoat.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.Location = new System.Drawing.Point(147, 197);
@@ -112,7 +114,7 @@
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.btnThoat);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.ShowIcon = false;

@@ -17,14 +17,14 @@ namespace QuanLyThuVien
         {
             InitializeComponent();
         }
-
+        
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (!bLLTaiKhoan.ktDangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
                 MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                frmMain frm = new frmMain(this,txtTaiKhoan.Text);
+                frmMain frm = new frmMain(txtTaiKhoan.Text);
                 this.Hide();
                 frm.Show();
             }
@@ -32,7 +32,7 @@ namespace QuanLyThuVien
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
     }
 }

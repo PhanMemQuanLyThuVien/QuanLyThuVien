@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,8 +51,17 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ThuVienControl">
+      <HintPath>..\..\..\THUVIENTUVIET\THUVIEN\ThuVienControl\bin\Debug\ThuVienControl.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmChiTietDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChiTietDocGia.Designer.cs">
+      <DependentUpon>frmChiTietDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +88,11 @@
     <Compile Include="UserCtrlQuanLyMuonTra.Designer.cs">
       <DependentUpon>UserCtrlQuanLyMuonTra.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserCtrlQuanLyNhanVien.cs">
+    <Compile Include="UserCtrlQuanLyThuThu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserCtrlQuanLyNhanVien.Designer.cs">
-      <DependentUpon>UserCtrlQuanLyNhanVien.cs</DependentUpon>
+    <Compile Include="UserCtrlQuanLyThuThu.Designer.cs">
+      <DependentUpon>UserCtrlQuanLyThuThu.cs</DependentUpon>
     </Compile>
     <Compile Include="UserCtrlQuanLySach.cs">
       <SubType>UserControl</SubType>
@@ -102,6 +112,9 @@
     <Compile Include="UserCtrlThongTinThuThu.Designer.cs">
       <DependentUpon>UserCtrlThongTinThuThu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmChiTietDocGia.resx">
+      <DependentUpon>frmChiTietDocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,8 +137,8 @@
     <EmbeddedResource Include="UserCtrlQuanLyMuonTra.resx">
       <DependentUpon>UserCtrlQuanLyMuonTra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserCtrlQuanLyNhanVien.resx">
-      <DependentUpon>UserCtrlQuanLyNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="UserCtrlQuanLyThuThu.resx">
+      <DependentUpon>UserCtrlQuanLyThuThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtrlQuanLySach.resx">
       <DependentUpon>UserCtrlQuanLySach.cs</DependentUpon>

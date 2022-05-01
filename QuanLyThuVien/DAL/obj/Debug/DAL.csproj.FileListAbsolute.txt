@@ -6,5 +6,4 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DAL\obj\Debug\DAL.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DAL\bin\Debug\DTO.dll
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DAL\bin\Debug\DTO.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DAL\bin\Debug\DTO.dll.config
-E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DAL\obj\Debug\DAL.csproj.CopyComplete

@@ -6,9 +6,7 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMain.resources
-E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csprojAssemblyReference.cache
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.CoreCompileInputs.cache
-E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyNhanVien.resources
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyDocGia.resources
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyMuonTra.resources
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLySach.resources
@@ -23,3 +21,8 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO.dll.config
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DAL.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.CopyComplete
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyThuThu.resources
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csprojAssemblyReference.cache
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\ThuVienControl.dll
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\ThuVienControl.pdb
+E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmChiTietDocGia.resources

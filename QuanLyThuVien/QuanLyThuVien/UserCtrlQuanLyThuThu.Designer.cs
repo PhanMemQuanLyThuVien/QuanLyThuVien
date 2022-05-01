@@ -1,6 +1,6 @@
 ﻿namespace QuanLyThuVien
 {
-    partial class UserCtrlQuanLyNhanVien
+    partial class UserCtrlQuanLyThuThu
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // UserCtrlQuanLyNhanVien
+            // UserCtrlQuanLyThuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "UserCtrlQuanLyNhanVien";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "UserCtrlQuanLyThuThu";
             this.Size = new System.Drawing.Size(1012, 605);
             this.ResumeLayout(false);
 

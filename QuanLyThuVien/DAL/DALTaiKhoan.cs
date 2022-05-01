@@ -10,9 +10,15 @@ namespace DAL
     {
         QuanLyThuVienDataContext qltv = new QuanLyThuVienDataContext();
         public DALTaiKhoan() { }
+
         public List<TAIKHOAN> lstTaiKhoan()
         {
             return qltv.TAIKHOANs.Select(tk => tk).ToList<TAIKHOAN>();
+        }
+
+        public TAIKHOAN getTaiKhoan(string email)
+        {
+            return qltv.TAIKHOANs.Where(tk => tk.EMAIL.Trim() == email).FirstOrDefault();
         }
     }
 }
