@@ -34,5 +34,10 @@ namespace QuanLyThuVien
         {
             Environment.Exit(0);
         }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

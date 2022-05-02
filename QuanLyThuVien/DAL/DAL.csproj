@@ -46,9 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALChiTietMuonTra.cs" />
     <Compile Include="DALDonVi.cs" />
+    <Compile Include="DALMuonTraSach.cs" />
+    <Compile Include="DALNhaXuatBan.cs" />
+    <Compile Include="DALSach.cs" />
+    <Compile Include="DALTacGia.cs" />
     <Compile Include="DALTaiKhoan.cs" />
     <Compile Include="DALDocGia.cs" />
+    <Compile Include="DALTheLoai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.pnNhapTT = new System.Windows.Forms.Panel();
+            this.dateTimePickerNgayHetHan = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.lbMaSoThe = new System.Windows.Forms.Label();
+            this.txtMaSoThe = new System.Windows.Forms.TextBox();
             this.txtEmai = new ThuVienControl.txtEmail();
             this.txtCMND = new ThuVienControl.txtSo();
             this.txtSoDT = new ThuVienControl.txtSo();
@@ -50,14 +58,6 @@
             this.btnChonHinhDG = new System.Windows.Forms.Button();
             this.txtHoTenDG = new System.Windows.Forms.TextBox();
             this.picAnhDG = new System.Windows.Forms.PictureBox();
-            this.lbMaSoThe = new System.Windows.Forms.Label();
-            this.txtMaSoThe = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePickerNgayHetHan = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnNhapTT.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnhDG)).BeginInit();
@@ -98,6 +98,98 @@
             this.pnNhapTT.Name = "pnNhapTT";
             this.pnNhapTT.Size = new System.Drawing.Size(1020, 484);
             this.pnNhapTT.TabIndex = 30;
+            // 
+            // dateTimePickerNgayHetHan
+            // 
+            this.dateTimePickerNgayHetHan.CalendarForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayHetHan.CalendarMonthBackground = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayHetHan.CalendarTitleBackColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayHetHan.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayHetHan.CalendarTrailingForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayHetHan.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerNgayHetHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNgayHetHan.Location = new System.Drawing.Point(635, 317);
+            this.dateTimePickerNgayHetHan.Name = "dateTimePickerNgayHetHan";
+            this.dateTimePickerNgayHetHan.Size = new System.Drawing.Size(303, 33);
+            this.dateTimePickerNgayHetHan.TabIndex = 57;
+            this.dateTimePickerNgayHetHan.Value = new System.DateTime(2021, 1, 27, 0, 0, 0, 0);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(635, 283);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(303, 33);
+            this.label2.TabIndex = 56;
+            this.label2.Text = "Hạn Sử Dụng:";
+            // 
+            // dateTimePickerNgayLap
+            // 
+            this.dateTimePickerNgayLap.CalendarForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayLap.CalendarMonthBackground = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayLap.CalendarTitleBackColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayLap.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayLap.CalendarTrailingForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(635, 249);
+            this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
+            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(303, 33);
+            this.dateTimePickerNgayLap.TabIndex = 55;
+            this.dateTimePickerNgayLap.Value = new System.DateTime(2021, 1, 27, 0, 0, 0, 0);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(635, 215);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(303, 33);
+            this.label1.TabIndex = 54;
+            this.label1.Text = "Ngày Lập:";
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(742, 377);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(95, 41);
+            this.btnSua.TabIndex = 53;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(641, 377);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(95, 41);
+            this.btnXoa.TabIndex = 52;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // lbMaSoThe
+            // 
+            this.lbMaSoThe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaSoThe.Location = new System.Drawing.Point(292, 11);
+            this.lbMaSoThe.Name = "lbMaSoThe";
+            this.lbMaSoThe.Size = new System.Drawing.Size(303, 33);
+            this.lbMaSoThe.TabIndex = 50;
+            this.lbMaSoThe.Text = "Mã Số Thẻ:";
+            // 
+            // txtMaSoThe
+            // 
+            this.txtMaSoThe.Enabled = false;
+            this.txtMaSoThe.ForeColor = System.Drawing.Color.Black;
+            this.txtMaSoThe.Location = new System.Drawing.Point(292, 45);
+            this.txtMaSoThe.Name = "txtMaSoThe";
+            this.txtMaSoThe.Size = new System.Drawing.Size(303, 33);
+            this.txtMaSoThe.TabIndex = 51;
             // 
             // txtEmai
             // 
@@ -284,6 +376,7 @@
             this.btnChonHinhDG.TabIndex = 15;
             this.btnChonHinhDG.Text = "Chọn hình";
             this.btnChonHinhDG.UseVisualStyleBackColor = false;
+            this.btnChonHinhDG.Click += new System.EventHandler(this.btnChonHinhDG_Click);
             // 
             // txtHoTenDG
             // 
@@ -303,98 +396,6 @@
             this.picAnhDG.TabIndex = 15;
             this.picAnhDG.TabStop = false;
             // 
-            // lbMaSoThe
-            // 
-            this.lbMaSoThe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaSoThe.Location = new System.Drawing.Point(292, 11);
-            this.lbMaSoThe.Name = "lbMaSoThe";
-            this.lbMaSoThe.Size = new System.Drawing.Size(303, 33);
-            this.lbMaSoThe.TabIndex = 50;
-            this.lbMaSoThe.Text = "Mã Số Thẻ:";
-            // 
-            // txtMaSoThe
-            // 
-            this.txtMaSoThe.Enabled = false;
-            this.txtMaSoThe.ForeColor = System.Drawing.Color.Black;
-            this.txtMaSoThe.Location = new System.Drawing.Point(292, 45);
-            this.txtMaSoThe.Name = "txtMaSoThe";
-            this.txtMaSoThe.Size = new System.Drawing.Size(303, 33);
-            this.txtMaSoThe.TabIndex = 51;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(641, 377);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(95, 41);
-            this.btnXoa.TabIndex = 52;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(742, 377);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(95, 41);
-            this.btnSua.TabIndex = 53;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // dateTimePickerNgayLap
-            // 
-            this.dateTimePickerNgayLap.CalendarForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayLap.CalendarMonthBackground = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayLap.CalendarTitleBackColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayLap.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayLap.CalendarTrailingForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayLap.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePickerNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(635, 249);
-            this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
-            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(303, 33);
-            this.dateTimePickerNgayLap.TabIndex = 55;
-            this.dateTimePickerNgayLap.Value = new System.DateTime(2021, 1, 27, 0, 0, 0, 0);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(635, 215);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 33);
-            this.label1.TabIndex = 54;
-            this.label1.Text = "Ngày Lập:";
-            // 
-            // dateTimePickerNgayHetHan
-            // 
-            this.dateTimePickerNgayHetHan.CalendarForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayHetHan.CalendarMonthBackground = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayHetHan.CalendarTitleBackColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayHetHan.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayHetHan.CalendarTrailingForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNgayHetHan.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePickerNgayHetHan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNgayHetHan.Location = new System.Drawing.Point(635, 317);
-            this.dateTimePickerNgayHetHan.Name = "dateTimePickerNgayHetHan";
-            this.dateTimePickerNgayHetHan.Size = new System.Drawing.Size(303, 33);
-            this.dateTimePickerNgayHetHan.TabIndex = 57;
-            this.dateTimePickerNgayHetHan.Value = new System.DateTime(2021, 1, 27, 0, 0, 0, 0);
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(635, 283);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 33);
-            this.label2.TabIndex = 56;
-            this.label2.Text = "Hạn Sử Dụng:";
-            // 
             // frmChiTietDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
@@ -404,7 +405,7 @@
             this.Controls.Add(this.pnNhapTT);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.Name = "frmChiTietDocGia";
             this.ShowIcon = false;

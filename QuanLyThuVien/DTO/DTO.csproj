@@ -55,6 +55,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyThuVien.dbml</DependentUpon>
     </Compile>
+    <Compile Include="SACH.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

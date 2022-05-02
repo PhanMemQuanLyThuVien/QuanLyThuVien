@@ -62,6 +62,12 @@
     <Compile Include="frmChiTietDocGia.Designer.cs">
       <DependentUpon>frmChiTietDocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChoMuonSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChoMuonSach.Designer.cs">
+      <DependentUpon>frmChoMuonSach.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <EmbeddedResource Include="frmChiTietDocGia.resx">
       <DependentUpon>frmChiTietDocGia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChoMuonSach.resx">
+      <DependentUpon>frmChoMuonSach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,8 +32,8 @@ namespace QuanLyThuVien
             {
                 if (bLLDocGia.xoaDocGia(maSoThe))
                 {
-                    MessageBox.Show("Xóa thành công!", "Thông báo");
                     userCtrlQuanLyDocGia.loadDocGia();
+                    MessageBox.Show("Xóa thành công!", "Thông báo");
                     this.Close();
                 }
                 else
@@ -47,7 +48,34 @@ namespace QuanLyThuVien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            enabledControl(false);
+            DOCGIA dg = new DOCGIA();
+            dg.IDMASOTHE = maSoThe;
+            dg.HOTEN = txtHoTenDG.Text;
+            dg.NGAYSINH = dateTimePickerNgaySinh.Value;
+            dg.SODT = txtSoDT.Text;
+            dg.EMAIL = txtEmai.Text;
+            dg.IDDONVI = int.Parse(cboDonVi.SelectedValue.ToString());
+            dg.GIOITINH = rdoNam.Checked;
+            dg.NGAYLAP = dateTimePickerNgayLap.Value;
+            dg.HANSUDUNG = dateTimePickerNgayHetHan.Value;
+            dg.DIACHI = txtDiaChi.Text;
+            dg.CMND = txtCMND.Text;
+            dg.HINHANH = nameImageDocGia;
+            if (bLLDocGia.capNhatDocGia(dg))
+            {
+                userCtrlQuanLyDocGia.loadDocGia();
+                enabledControl(false);
+                MessageBox.Show("Lưu thành công!", "Thông báo");
+                try
+                {
+                    string duongDanLuuHinh = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "\\QuanLyThuVien\\Images\\" + nameImageDocGia;
+                    File.Copy(pathImage, duongDanLuuHinh, true);
+                }
+                catch { }
+            }
+            else
+                MessageBox.Show("Lưu thất bại!", "Thông báo");
+            
         }
 
         private void frmChiTietDocGia_Load(object sender, EventArgs e)
@@ -72,6 +100,14 @@ namespace QuanLyThuVien
             dateTimePickerNgaySinh.Value = (DateTime)dOCGIA.NGAYSINH;
             dateTimePickerNgayLap.Value = (DateTime)dOCGIA.NGAYLAP;
             dateTimePickerNgayHetHan.Value = (DateTime)dOCGIA.HANSUDUNG;
+            nameImageDocGia = dOCGIA.HINHANH;
+            pathImage = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "\\QuanLyThuVien\\Images\\" + nameImageDocGia;
+            //hiện hình ảnh lên pic
+            try
+            {
+                picAnhDG.Image = Image.FromFile(pathImage);
+            }
+            catch { }
             if (dOCGIA.GIOITINH == true)
                 rdoNam.Checked = true;
             else
@@ -85,6 +121,23 @@ namespace QuanLyThuVien
             txtHoTenDG.Enabled = txtSoDT.Enabled = enabled;
             dateTimePickerNgayHetHan.Enabled = dateTimePickerNgayLap.Enabled = dateTimePickerNgaySinh.Enabled= enabled;
             btnChonHinhDG.Enabled = rdoNam.Enabled = rdoNu.Enabled = cboDonVi.Enabled = enabled;
+        }
+
+        string nameImageDocGia = string.Empty;
+        string pathImage = string.Empty;
+        private void btnChonHinhDG_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image files(*.jpg;*.jpeg;)|*.jpg;*.jpge;", Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    string[] duongDanHinh = ofd.FileName.ToString().Split('\\');
+                    nameImageDocGia = duongDanHinh[duongDanHinh.Length - 1];
+                    pathImage = ofd.FileName;
+                    //hiện hình ảnh lên pic
+                    picAnhDG.Image = Image.FromFile(pathImage);
+                }
+            }
         }
     }
 }

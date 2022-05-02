@@ -18,10 +18,10 @@ CREATE TABLE	 NHAXUATBAN
 (
 	ID INT IDENTITY(1,1) PRIMARY KEY,
 	TENNXB NVARCHAR(50) NOT NULL,
-	SODT NCHAR(20) NULL,
+	SODT VARCHAR(20) NULL,
 	DIACHI NVARCHAR(50) NULL,
-	EMAIL NVARCHAR(50) NULL,
-	WEBSITE NVARCHAR(50) NULL
+	EMAIL VARCHAR(50) NULL,
+	WEBSITE VARCHAR(50) NULL
 )
 GO
 CREATE TABLE	 THELOAI
@@ -40,7 +40,8 @@ CREATE TABLE	 SACH
 	IDTACGIA INT NOT NULL,
 	GIA FLOAT NOT NULL,
 	SOLUONGSACH INT NOT NULL,
-	VITRISACH NVARCHAR(20) NULL
+	VITRISACH NVARCHAR(20) NULL,
+	HINHSACH VARCHAR(50)
 )
 GO
 CREATE TABLE	 DONVI
@@ -309,6 +310,106 @@ VALUES
     N'Bình Tân, TPHCM',       -- DIACHI - nvarchar(50)
     N''        -- HINHANH - nchar(100)
     )
+
+INSERT INTO dbo.TACGIA
+(
+    BUTDANH
+)
+VALUES
+(N'Nguyễn Hiến Lê' -- BUTDANH - nvarchar(50)
+    )
+INSERT INTO dbo.TACGIA
+(
+    BUTDANH
+)
+VALUES
+(N'Nguyễn Bá Tưởng' -- BUTDANH - nvarchar(50)
+    )
+GO
+INSERT INTO dbo.NHAXUATBAN(TENNXB,SODT,DIACHI,EMAIL,WEBSITE)
+VALUES
+(N'NXB Kim Đồng','1900571595',N'Ba Đình-Hà Nội','nxbkimdong@gmail.com','www.nxbkimdong.vn'),
+(N'NXB Giáo dục','02439422010',N'Ba Đình-Hà Nội','nxbgd@gmail.com','www.nxbgd.vn'),
+(N'NXB Tuổi trẻ','8438437450',N'Quận 3, TP. Hồ Chí Minh','nxbtre@gmail.com','www.nxbtre.com.vn'),
+(N'NXB ĐHQG','02866817058',N'Quận Thủ Đức, TP Hồ Chí Minh','phathanh.nxb@vnuhcm.edu.vn','www.vnuhcmpress.edu.vn'),
+(N'NXB TPHCM','8438256713',N'Quận 4, TP. Hồ Chí Minh','nxbhcm@gmail.com','www.nxbhcm.com.vn')
+GO
+INSERT INTO dbo.THELOAI
+(
+    TENTHELOAI
+)
+VALUES
+(N'Phát Triển Bản Thân' -- TENTHELOAI - nvarchar(50)
+    )
+INSERT INTO dbo.THELOAI
+(
+    TENTHELOAI
+)
+VALUES
+(N'Khởi Nghiệp' -- TENTHELOAI - nvarchar(50)
+    )
+
+GO
+INSERT INTO dbo.SACH
+(
+    TENSACH,
+    IDNXB,
+    NAMXB,
+    IDTHELOAI,
+    IDTACGIA,
+    GIA,
+    SOLUONGSACH,
+    VITRISACH,
+    HINHSACH
+)
+VALUES
+(   N'Đắc Nhân Tâm', -- TENSACH - nvarchar(50)
+    1,   -- IDNXB - int
+    1936,   -- NAMXB - int
+    1,   -- IDTHELOAI - int
+    1,   -- IDTACGIA - int
+    51000.0, -- GIA - float
+    10,   -- SOLUONGSACH - int
+    N'Kệ 1', -- VITRISACH - nvarchar(20)
+    '1.jpg'   -- HINHSACH - varchar(50)
+    )
+INSERT INTO dbo.SACH
+(
+    TENSACH,
+    IDNXB,
+    NAMXB,
+    IDTHELOAI,
+    IDTACGIA,
+    GIA,
+    SOLUONGSACH,
+    VITRISACH,
+    HINHSACH
+)
+VALUES
+(   N'Nghệ Thuật Bài Trí Của Người Nhật', -- TENSACH - nvarchar(50)
+    2,   -- IDNXB - int
+    1984,   -- NAMXB - int
+    2,   -- IDTHELOAI - int
+    2,   -- IDTACGIA - int
+    70000.0, -- GIA - float
+    10,   -- SOLUONGSACH - int
+    N'Kệ 2', -- VITRISACH - nvarchar(20)
+    '2.jpg'   -- HINHSACH - varchar(50)
+    )
+
+
+CREATE PROCEDURE timSachTheoTen(@tenSach nvarchar(50))
+AS 
+BEGIN
+     SELECT * 
+     FROM dbo.SACH
+	 WHERE TENSACH LIKE '%' + @tenSach + '%'
+END;
+
+--EXEC timSachTheoTen N'bài';
+SELECT * FROM dbo.MUONTRASACH
+SELECT * FROM dbo.CHITIETMUONTRA
+SELECT * FROM dbo.SACH
 --SELECT * FROM dbo.DONVI
 --SELECT * FROM dbo.TAIKHOAN WHERE EMAIL = 'lamchikhang.it@gmail.com'
 ----xem chức vụ của từng nhân viên
@@ -317,3 +418,6 @@ VALUES
 --WHERE tk.EMAIL = nv.EMAIL AND tk.CHUCVU = cv.ID
 
 --SELECT * FROM dbo.DOCGIA
+SELECT * 
+FROM dbo.SACH
+WHERE TENSACH LIKE '%' + N'đắc' + '%'

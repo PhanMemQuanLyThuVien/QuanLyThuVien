@@ -23,6 +23,7 @@ namespace QuanLyThuVien
         private void frmMain_Load(object sender, EventArgs e)
         {
             phanQuyenMenu(menuStripQuanLy, bLLTaiKhoan.getMaChucVuTaiKhoan(emailNhanVien));
+            addUserControl(new UserCtrlQuanLySach());
         }
 
         private void phanQuyenMenu(MenuStrip menuStripQL, string maChucVu)

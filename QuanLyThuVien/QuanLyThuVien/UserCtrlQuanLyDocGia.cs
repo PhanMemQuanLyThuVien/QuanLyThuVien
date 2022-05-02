@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using DTO;
+using System.IO;
+
 namespace QuanLyThuVien
 {
     public partial class UserCtrlQuanLyDocGia : UserControl
     {
         BLLDocGia bLLDocGia = new BLLDocGia();
         BLLDonVi bLLDonVi = new BLLDonVi();
+        BLLXuLy bLLXuLy = new BLLXuLy();
         public UserCtrlQuanLyDocGia()
         {
             InitializeComponent();
@@ -39,7 +42,7 @@ namespace QuanLyThuVien
 
         public void loadDocGia()
         {
-            dagirdDanhSachDocGia.DataSource = bLLDocGia.lstDocGia();
+            dagirdDanhSachDocGia.DataSource = new BLLDocGia().lstDocGia();
             anCotKhongCanThiet();
         }
 
@@ -57,11 +60,14 @@ namespace QuanLyThuVien
             dg.NGAYLAP = DateTime.Now;
             //hạn sử dụng 1 năm kể từ ngày lập
             dg.HANSUDUNG = new DateTime(DateTime.Now.Year + 1, DateTime.Now.Month, DateTime.Now.Day);
-            dg.HINHANH = nameImageDocGia;
+            dg.HINHANH = bLLXuLy.nameImage;
             dg.DIACHI = txtDiaChi.Text;
             dg.CMND = txtCMND.Text;
             if (bLLDocGia.themDocGia(dg))
+            {
                 MessageBox.Show("Thêm thành công!", "Thông báo");
+                File.Copy(bLLXuLy.pathImage, bLLXuLy.duongDanLuuHinh, true);
+            }
             else
                 MessageBox.Show("Thêm thất bại!", "Thông báo");
             loadDocGia();
@@ -104,6 +110,7 @@ namespace QuanLyThuVien
 
         private void btnLoadAll_Click(object sender, EventArgs e)
         {
+            txtTim.Clear();
             loadDocGia();
         }
 
@@ -133,19 +140,15 @@ namespace QuanLyThuVien
                 MessageBox.Show("Vui lòng nhập mã số độc giả!", "Thông báo");
             }
         }
-        string nameImageDocGia = string.Empty;
+
         private void btnChonHinhDG_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image files(*.jpg;*.jpeg;)|*.jpg;*.jpge;", Multiselect = false })
+            bLLXuLy.chonHinh();
+            try
             {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                {
-                    string[] duongDanHinh = ofd.FileName.ToString().Split('\\');
-                    nameImageDocGia = duongDanHinh[duongDanHinh.Length - 1]; 
-                    //hiện hình ảnh lên pic
-                    picAnhDG.Image = Image.FromFile(ofd.FileName);
-                }
+                picAnhDG.Image = Image.FromFile(bLLXuLy.pathImage);
             }
+            catch { }
         }
 
         private void btnXemChiTietDocGia_Click(object sender, EventArgs e)

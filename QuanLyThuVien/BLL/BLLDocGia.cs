@@ -53,6 +53,7 @@ namespace BLL
                 dg.HINHANH = item.HINHANH;
                 dg.tenDonVi = item.TENDONVI;
                 dg.IDDONVI = item.IDDONVI;
+                dg.GIOITINH = item.GIOITINH;
                 if (item.GIOITINH==true)
                     dg.gioiTinhString = "Nam";
                 else
@@ -64,7 +65,7 @@ namespace BLL
 
         public DOCGIA docGiaTheoMa(int maDG)
         {
-            return lstDocGia().Where(dg => dg.IDMASOTHE == maDG).FirstOrDefault();
+            return lstDocGia().Where(dg => dg.IDMASOTHE == maDG).Single();
         }
 
         public bool themDocGia(DOCGIA docGia)
@@ -75,6 +76,11 @@ namespace BLL
         public bool xoaDocGia(int maDG)
         {
             return dALDocGia.xoaDocGia(maDG);
+        }
+
+        public bool capNhatDocGia(DOCGIA docGia)
+        {
+            return dALDocGia.capNhatDocGia(docGia);
         }
     }
 }

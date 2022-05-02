@@ -8,20 +8,20 @@ namespace DAL
 {
     public class DALDocGia
     {
-        QuanLyThuVienDataContext qltv = new QuanLyThuVienDataContext();
+        QuanLyThuVienDataContext quanLyThuVienDataContext = new QuanLyThuVienDataContext();
         public DALDocGia() { }
 
         public List<DOCGIA> lstDocGia()
         {
-            return qltv.DOCGIAs.Select(dg => dg).ToList<DOCGIA>();
+            return quanLyThuVienDataContext.DOCGIAs.Select(dg => dg).ToList<DOCGIA>();
         }
         
         public bool themDocGia(DOCGIA docGia)
         {
             try
             {
-                qltv.DOCGIAs.InsertOnSubmit(docGia);
-                qltv.SubmitChanges();
+                quanLyThuVienDataContext.DOCGIAs.InsertOnSubmit(docGia);
+                quanLyThuVienDataContext.SubmitChanges();
                 return true;
             }
             catch
@@ -34,9 +34,9 @@ namespace DAL
         {
             try
             {
-                DOCGIA dOCGIA = qltv.DOCGIAs.Where(dg => dg.IDMASOTHE == maDG).Single();
-                qltv.DOCGIAs.DeleteOnSubmit(dOCGIA);
-                qltv.SubmitChanges();
+                DOCGIA dOCGIA = quanLyThuVienDataContext.DOCGIAs.Where(dg => dg.IDMASOTHE == maDG).Single();
+                quanLyThuVienDataContext.DOCGIAs.DeleteOnSubmit(dOCGIA);
+                quanLyThuVienDataContext.SubmitChanges();
                 return true;
             }
             catch
@@ -44,5 +44,33 @@ namespace DAL
                 return false;
             }
         }
+
+        public bool capNhatDocGia(DOCGIA docGia)
+        {
+            try
+            {
+                DOCGIA dg = quanLyThuVienDataContext.DOCGIAs.Where(dG => dG.IDMASOTHE == docGia.IDMASOTHE).Single();
+                //dg = docGia;
+                dg.HOTEN = docGia.HOTEN;
+                dg.NGAYSINH = docGia.NGAYSINH;
+                dg.NGAYLAP = docGia.NGAYLAP;
+                dg.HANSUDUNG = docGia.HANSUDUNG;
+                dg.HINHANH = docGia.HINHANH;
+                dg.SODT = docGia.SODT;
+                dg.GIOITINH = docGia.GIOITINH;
+                dg.CMND = docGia.CMND;
+                dg.DIACHI = docGia.DIACHI;
+                dg.IDDONVI = docGia.IDDONVI;
+                dg.EMAIL = docGia.EMAIL;
+
+                quanLyThuVienDataContext.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        
     }
 }

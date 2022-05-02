@@ -124,23 +124,6 @@
       <Association Name="NHANVIEN_PHIEUPHAT" Member="NHANVIEN" ThisKey="IDTHUTHULAPPHIEU" OtherKey="ID" Type="NHANVIEN" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.SACH" Member="SACHes">
-    <Type Name="SACH">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="TENSACH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="IDNXB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="NAMXB" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="IDTHELOAI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="IDTACGIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="GIA" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
-      <Column Name="SOLUONGSACH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="VITRISACH" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Association Name="SACH_CHITIETMUONTRA" Member="CHITIETMUONTRAs" ThisKey="ID" OtherKey="IDSACH" Type="CHITIETMUONTRA" />
-      <Association Name="NHAXUATBAN_SACH" Member="NHAXUATBAN" ThisKey="IDNXB" OtherKey="ID" Type="NHAXUATBAN" IsForeignKey="true" />
-      <Association Name="THELOAI_SACH" Member="THELOAI" ThisKey="IDTHELOAI" OtherKey="ID" Type="THELOAI" IsForeignKey="true" />
-      <Association Name="TACGIA_SACH" Member="TACGIA" ThisKey="IDTACGIA" OtherKey="ID" Type="TACGIA" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.TACGIA" Member="TACGIAs">
     <Type Name="TACGIA">
       <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -157,4 +140,37 @@
       <Association Name="CHUCVU_TAIKHOAN" Member="CHUCVU1" ThisKey="CHUCVU" OtherKey="ID" Type="CHUCVU" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.SACH" Member="SACHes">
+    <Type Name="SACH">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENSACH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDNXB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NAMXB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDTHELOAI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDTACGIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GIA" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SOLUONGSACH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VITRISACH" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HINHSACH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="SACH_CHITIETMUONTRA" Member="CHITIETMUONTRAs" ThisKey="ID" OtherKey="IDSACH" Type="CHITIETMUONTRA" />
+      <Association Name="NHAXUATBAN_SACH" Member="NHAXUATBAN" ThisKey="IDNXB" OtherKey="ID" Type="NHAXUATBAN" IsForeignKey="true" />
+      <Association Name="TACGIA_SACH" Member="TACGIA" ThisKey="IDTACGIA" OtherKey="ID" Type="TACGIA" IsForeignKey="true" />
+      <Association Name="THELOAI_SACH" Member="THELOAI" ThisKey="IDTHELOAI" OtherKey="ID" Type="THELOAI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.timSachTheoTen" Method="timSachTheoTen">
+    <Parameter Name="tenSach" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="timSachTheoTenResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TENSACH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDNXB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NAMXB" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDTHELOAI" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IDTACGIA" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="GIA" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SOLUONGSACH" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VITRISACH" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="HINHSACH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
