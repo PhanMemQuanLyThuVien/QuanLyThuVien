@@ -48,7 +48,10 @@ namespace BLL
             chiTietMuon.IDTHUTHUCHOMUON = IDThuThu;
             chiTietMuon.SOLUONGMUON = soLuongMuon;
             chiTietMuon.NGAYMUON = DateTime.Now;
-            chiTietMuon.HANTRA = DateTime.Now.AddDays(30);
+            if(dOCGIA.IDDONVI==1)
+                chiTietMuon.HANTRA = DateTime.Now.AddDays(30);//đơn vị trong trường cho mượn 30 ngày
+            else if(dOCGIA.IDDONVI == 2)
+                chiTietMuon.HANTRA = DateTime.Now.AddDays(10);//đơn vị ngoài trường cho mượn 10 ngày
             chiTietMuon.TIENTHECHAN = tienTheChan;
             chiTietMuon.TINHTRANG = false;
             return dALChiTietMuonTra.themChiTietMuonTra(chiTietMuon);
