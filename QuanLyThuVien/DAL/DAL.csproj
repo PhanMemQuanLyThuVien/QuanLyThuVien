@@ -49,6 +49,7 @@
     <Compile Include="DALChiTietMuonTra.cs" />
     <Compile Include="DALDonVi.cs" />
     <Compile Include="DALMuonTraSach.cs" />
+    <Compile Include="DALNhanVien.cs" />
     <Compile Include="DALNhaXuatBan.cs" />
     <Compile Include="DALSach.cs" />
     <Compile Include="DALTacGia.cs" />

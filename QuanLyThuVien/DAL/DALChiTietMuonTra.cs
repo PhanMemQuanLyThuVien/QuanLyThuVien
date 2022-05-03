@@ -15,5 +15,16 @@ namespace DAL
         {
             return quanLyThuVienDataContext.CHITIETMUONTRAs.Select(s => s).ToList<CHITIETMUONTRA>();
         }
+
+        public bool themChiTietMuonTra(CHITIETMUONTRA chiTietMuon)
+        {
+            try
+            {
+                quanLyThuVienDataContext.CHITIETMUONTRAs.InsertOnSubmit(chiTietMuon);
+                quanLyThuVienDataContext.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
     }
 }

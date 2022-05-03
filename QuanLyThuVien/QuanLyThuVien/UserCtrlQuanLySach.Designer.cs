@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gpboxNhapTT = new System.Windows.Forms.GroupBox();
             this.pnNhapTT = new System.Windows.Forms.Panel();
+            this.btnChoMuon = new System.Windows.Forms.Button();
+            this.btnXoaThem = new System.Windows.Forms.Button();
+            this.btnXoaSach = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.btnThemTacGia = new System.Windows.Forms.Button();
             this.btnThemNXB = new System.Windows.Forms.Button();
             this.btnThemTheLoai = new System.Windows.Forms.Button();
@@ -58,12 +62,6 @@
             this.grpBoxTTSach = new System.Windows.Forms.GroupBox();
             this.pnDSSach = new System.Windows.Forms.Panel();
             this.dagirdDanhSachSach = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanelTimKiem = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTim = new System.Windows.Forms.TextBox();
-            this.btnTim = new System.Windows.Forms.Button();
-            this.btnLoadAll = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoaSach = new System.Windows.Forms.Button();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDnxb = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,8 +75,10 @@
             this.IDTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ViTri = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoaThem = new System.Windows.Forms.Button();
-            this.btnChoMuon = new System.Windows.Forms.Button();
+            this.tableLayoutPanelTimKiem = new System.Windows.Forms.TableLayoutPanel();
+            this.txtTim = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnLoadAll = new System.Windows.Forms.Button();
             this.gpboxNhapTT.SuspendLayout();
             this.pnNhapTT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnhSach)).BeginInit();
@@ -135,6 +135,58 @@
             this.pnNhapTT.Name = "pnNhapTT";
             this.pnNhapTT.Size = new System.Drawing.Size(625, 681);
             this.pnNhapTT.TabIndex = 29;
+            // 
+            // btnChoMuon
+            // 
+            this.btnChoMuon.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnChoMuon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChoMuon.ForeColor = System.Drawing.Color.White;
+            this.btnChoMuon.Location = new System.Drawing.Point(536, 521);
+            this.btnChoMuon.Name = "btnChoMuon";
+            this.btnChoMuon.Size = new System.Drawing.Size(84, 88);
+            this.btnChoMuon.TabIndex = 66;
+            this.btnChoMuon.Text = "Cho Mượn";
+            this.btnChoMuon.UseVisualStyleBackColor = false;
+            this.btnChoMuon.Click += new System.EventHandler(this.btnChoMuon_Click);
+            // 
+            // btnXoaThem
+            // 
+            this.btnXoaThem.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnXoaThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaThem.ForeColor = System.Drawing.Color.White;
+            this.btnXoaThem.Location = new System.Drawing.Point(226, 568);
+            this.btnXoaThem.Name = "btnXoaThem";
+            this.btnXoaThem.Size = new System.Drawing.Size(142, 41);
+            this.btnXoaThem.TabIndex = 65;
+            this.btnXoaThem.Text = "Thêm";
+            this.btnXoaThem.UseVisualStyleBackColor = false;
+            this.btnXoaThem.Click += new System.EventHandler(this.btnXoaThem_Click);
+            // 
+            // btnXoaSach
+            // 
+            this.btnXoaSach.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnXoaSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaSach.ForeColor = System.Drawing.Color.White;
+            this.btnXoaSach.Location = new System.Drawing.Point(226, 521);
+            this.btnXoaSach.Name = "btnXoaSach";
+            this.btnXoaSach.Size = new System.Drawing.Size(142, 41);
+            this.btnXoaSach.TabIndex = 63;
+            this.btnXoaSach.Text = "Xóa Sách";
+            this.btnXoaSach.UseVisualStyleBackColor = false;
+            this.btnXoaSach.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(388, 521);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(142, 41);
+            this.btnSua.TabIndex = 62;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThemTacGia
             // 
@@ -378,14 +430,14 @@
             this.dagirdDanhSachSach.AllowUserToDeleteRows = false;
             this.dagirdDanhSachSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dagirdDanhSachSach.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dagirdDanhSachSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dagirdDanhSachSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dagirdDanhSachSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dagirdDanhSachSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSach,
@@ -401,115 +453,32 @@
             this.IDTacGia,
             this.IDTheLoai,
             this.ViTri});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dagirdDanhSachSach.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dagirdDanhSachSach.DefaultCellStyle = dataGridViewCellStyle2;
             this.dagirdDanhSachSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dagirdDanhSachSach.Location = new System.Drawing.Point(0, 0);
             this.dagirdDanhSachSach.Name = "dagirdDanhSachSach";
             this.dagirdDanhSachSach.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dagirdDanhSachSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dagirdDanhSachSach.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dagirdDanhSachSach.RowHeadersWidth = 51;
             this.dagirdDanhSachSach.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.RoyalBlue;
             this.dagirdDanhSachSach.RowTemplate.Height = 24;
             this.dagirdDanhSachSach.Size = new System.Drawing.Size(656, 679);
             this.dagirdDanhSachSach.TabIndex = 12;
             this.dagirdDanhSachSach.SelectionChanged += new System.EventHandler(this.dagirdDanhSachSach_SelectionChanged);
-            // 
-            // tableLayoutPanelTimKiem
-            // 
-            this.tableLayoutPanelTimKiem.ColumnCount = 5;
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 658F));
-            this.tableLayoutPanelTimKiem.Controls.Add(this.txtTim, 1, 0);
-            this.tableLayoutPanelTimKiem.Controls.Add(this.btnTim, 2, 0);
-            this.tableLayoutPanelTimKiem.Controls.Add(this.btnLoadAll, 0, 0);
-            this.tableLayoutPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanelTimKiem.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanelTimKiem.Name = "tableLayoutPanelTimKiem";
-            this.tableLayoutPanelTimKiem.RowCount = 1;
-            this.tableLayoutPanelTimKiem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelTimKiem.Size = new System.Drawing.Size(1295, 40);
-            this.tableLayoutPanelTimKiem.TabIndex = 23;
-            // 
-            // txtTim
-            // 
-            this.txtTim.BackColor = System.Drawing.Color.White;
-            this.txtTim.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTim.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtTim.Location = new System.Drawing.Point(89, 3);
-            this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(229, 33);
-            this.txtTim.TabIndex = 18;
-            // 
-            // btnTim
-            // 
-            this.btnTim.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnTim.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(324, 3);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(141, 33);
-            this.btnTim.TabIndex = 19;
-            this.btnTim.Text = "Tìm kiếm";
-            this.btnTim.UseVisualStyleBackColor = false;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // btnLoadAll
-            // 
-            this.btnLoadAll.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnLoadAll.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoadAll.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadAll.ForeColor = System.Drawing.Color.White;
-            this.btnLoadAll.Location = new System.Drawing.Point(3, 3);
-            this.btnLoadAll.Name = "btnLoadAll";
-            this.btnLoadAll.Size = new System.Drawing.Size(80, 33);
-            this.btnLoadAll.TabIndex = 20;
-            this.btnLoadAll.Text = "Load";
-            this.btnLoadAll.UseVisualStyleBackColor = false;
-            this.btnLoadAll.Click += new System.EventHandler(this.btnLoadAll_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(388, 521);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(142, 41);
-            this.btnSua.TabIndex = 62;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnXoaSach
-            // 
-            this.btnXoaSach.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnXoaSach.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaSach.ForeColor = System.Drawing.Color.White;
-            this.btnXoaSach.Location = new System.Drawing.Point(226, 521);
-            this.btnXoaSach.Name = "btnXoaSach";
-            this.btnXoaSach.Size = new System.Drawing.Size(142, 41);
-            this.btnXoaSach.TabIndex = 63;
-            this.btnXoaSach.Text = "Xóa Sách";
-            this.btnXoaSach.UseVisualStyleBackColor = false;
-            this.btnXoaSach.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // MaSach
             // 
@@ -543,7 +512,7 @@
             this.TenSach.HeaderText = "Tên Sách";
             this.TenSach.Name = "TenSach";
             this.TenSach.ReadOnly = true;
-            this.TenSach.Width = 139;
+            this.TenSach.Width = 128;
             // 
             // TenTheLoai
             // 
@@ -551,7 +520,7 @@
             this.TenTheLoai.HeaderText = "Thể Loại";
             this.TenTheLoai.Name = "TenTheLoai";
             this.TenTheLoai.ReadOnly = true;
-            this.TenTheLoai.Width = 135;
+            this.TenTheLoai.Width = 124;
             // 
             // NamXB
             // 
@@ -619,31 +588,62 @@
             this.ViTri.ReadOnly = true;
             this.ViTri.Width = 95;
             // 
-            // btnXoaThem
+            // tableLayoutPanelTimKiem
             // 
-            this.btnXoaThem.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnXoaThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaThem.ForeColor = System.Drawing.Color.White;
-            this.btnXoaThem.Location = new System.Drawing.Point(226, 568);
-            this.btnXoaThem.Name = "btnXoaThem";
-            this.btnXoaThem.Size = new System.Drawing.Size(142, 41);
-            this.btnXoaThem.TabIndex = 65;
-            this.btnXoaThem.Text = "Thêm";
-            this.btnXoaThem.UseVisualStyleBackColor = false;
-            this.btnXoaThem.Click += new System.EventHandler(this.btnXoaThem_Click);
+            this.tableLayoutPanelTimKiem.ColumnCount = 5;
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 661F));
+            this.tableLayoutPanelTimKiem.Controls.Add(this.txtTim, 1, 0);
+            this.tableLayoutPanelTimKiem.Controls.Add(this.btnTim, 2, 0);
+            this.tableLayoutPanelTimKiem.Controls.Add(this.btnLoadAll, 0, 0);
+            this.tableLayoutPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanelTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanelTimKiem.Name = "tableLayoutPanelTimKiem";
+            this.tableLayoutPanelTimKiem.RowCount = 1;
+            this.tableLayoutPanelTimKiem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelTimKiem.Size = new System.Drawing.Size(1295, 40);
+            this.tableLayoutPanelTimKiem.TabIndex = 23;
             // 
-            // btnChoMuon
+            // txtTim
             // 
-            this.btnChoMuon.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnChoMuon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChoMuon.ForeColor = System.Drawing.Color.White;
-            this.btnChoMuon.Location = new System.Drawing.Point(536, 521);
-            this.btnChoMuon.Name = "btnChoMuon";
-            this.btnChoMuon.Size = new System.Drawing.Size(84, 88);
-            this.btnChoMuon.TabIndex = 66;
-            this.btnChoMuon.Text = "Cho Mượn";
-            this.btnChoMuon.UseVisualStyleBackColor = false;
-            this.btnChoMuon.Click += new System.EventHandler(this.btnChoMuon_Click);
+            this.txtTim.BackColor = System.Drawing.Color.White;
+            this.txtTim.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTim.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtTim.Location = new System.Drawing.Point(88, 3);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(227, 33);
+            this.txtTim.TabIndex = 18;
+            // 
+            // btnTim
+            // 
+            this.btnTim.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnTim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.ForeColor = System.Drawing.Color.White;
+            this.btnTim.Location = new System.Drawing.Point(321, 3);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(141, 33);
+            this.btnTim.TabIndex = 19;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // btnLoadAll
+            // 
+            this.btnLoadAll.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLoadAll.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoadAll.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadAll.ForeColor = System.Drawing.Color.White;
+            this.btnLoadAll.Location = new System.Drawing.Point(3, 3);
+            this.btnLoadAll.Name = "btnLoadAll";
+            this.btnLoadAll.Size = new System.Drawing.Size(79, 33);
+            this.btnLoadAll.TabIndex = 20;
+            this.btnLoadAll.Text = "Load";
+            this.btnLoadAll.UseVisualStyleBackColor = false;
+            this.btnLoadAll.Click += new System.EventHandler(this.btnLoadAll_Click);
             // 
             // UserCtrlQuanLySach
             // 

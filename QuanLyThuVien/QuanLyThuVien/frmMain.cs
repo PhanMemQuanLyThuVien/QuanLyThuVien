@@ -23,7 +23,7 @@ namespace QuanLyThuVien
         private void frmMain_Load(object sender, EventArgs e)
         {
             phanQuyenMenu(menuStripQuanLy, bLLTaiKhoan.getMaChucVuTaiKhoan(emailNhanVien));
-            addUserControl(new UserCtrlQuanLySach());
+            addUserControl(new UserCtrlQuanLySach(emailNhanVien));
         }
 
         private void phanQuyenMenu(MenuStrip menuStripQL, string maChucVu)
@@ -52,7 +52,7 @@ namespace QuanLyThuVien
 
         private void QuanLySachToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            addUserControl(new UserCtrlQuanLySach());
+            addUserControl(new UserCtrlQuanLySach(emailNhanVien));
         }
 
         private void QuanLyMuonTraToolStripMenuItem_Click(object sender, EventArgs e)

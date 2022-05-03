@@ -66,7 +66,11 @@ namespace QuanLyThuVien
             if (bLLDocGia.themDocGia(dg))
             {
                 MessageBox.Show("Thêm thành công!", "Thông báo");
-                File.Copy(bLLXuLy.pathImage, bLLXuLy.duongDanLuuHinh, true);
+                try
+                {
+                    File.Copy(bLLXuLy.pathImage, bLLXuLy.duongDanLuuHinh, true);
+                }
+                catch { }
             }
             else
                 MessageBox.Show("Thêm thất bại!", "Thông báo");

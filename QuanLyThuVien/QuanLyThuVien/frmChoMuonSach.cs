@@ -14,8 +14,10 @@ namespace QuanLyThuVien
     public partial class frmChoMuonSach : Form
     {
         private int maSach;
-        public frmChoMuonSach(int maSach)
+        private string emailNhanVien;
+        public frmChoMuonSach(int maSach, string emailNhanVien)
         {
+            this.emailNhanVien = emailNhanVien;
             this.maSach = maSach;
             InitializeComponent();
         }
@@ -32,6 +34,7 @@ namespace QuanLyThuVien
             txtTenSach.Text = sach.TENSACH;
             txtTenTacGia.Text = sach.BUTDANH;
             txtSoLuongSachCon.Text = sach.SOLUONGSACH.ToString();
+            txtTienTheChan.Text = sach.GIA.ToString();
             BLLXuLy bLLXuLy = new BLLXuLy();
             bLLXuLy.nameImage = sach.HINHSACH;
             bLLXuLy.loadDuongDanLuuHinh();
@@ -47,6 +50,29 @@ namespace QuanLyThuVien
             if (!kTNhap())
                 return;
 
+            int idThuThu = new BLLNhanVien().timIDNhanVien(emailNhanVien);
+            int soLuongMuon = int.Parse(txtSoLuongMuon.Text);
+            double tienTheChan = int.Parse(txtTienTheChan.Text);
+            if (new BLLChiTietMuonTra().themChiTietMuonTra(dOCGIA,sach,idThuThu, soLuongMuon,tienTheChan))
+            {
+                xoaDocGia();
+                MessageBox.Show("Cho mượn thành công!");
+            }
+            else
+            {
+                MessageBox.Show("Lỗi cho mượn!");
+            }
+        }
+
+        private void xoaDocGia()
+        {
+            txtEmai.Text = txtHoTenDG.Text = txtMaSoThe.Text = txtSoDT.Text = string.Empty;
+            dateTimePickerNgayHetHan.Value = DateTime.Now;
+            try
+            {
+                picAnhDG.Image = null;
+            }
+            catch { }
         }
 
         int soLuongMuon = 0;
@@ -74,6 +100,12 @@ namespace QuanLyThuVien
             {
                 txtSoLuongMuon.Focus();
                 MessageBox.Show("Số lượng sách mượn phải lớn hơn 0!");
+                return false;
+            }
+            if (soLuongMuon > 3)
+            {
+                txtSoLuongMuon.Focus();
+                MessageBox.Show("Số lượng sách mượn phải nhỏ hơn hoặc bằng 3!");
                 return false;
             }
             if (soLuongMuon > sach.SOLUONGSACH)

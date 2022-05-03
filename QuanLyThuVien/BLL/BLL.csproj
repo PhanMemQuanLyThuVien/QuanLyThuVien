@@ -53,6 +53,8 @@
     <Compile Include="BLLChiTietMuonTra.cs" />
     <Compile Include="BLLDocGia.cs" />
     <Compile Include="BLLDonVi.cs" />
+    <Compile Include="BLLMuonTraSach.cs" />
+    <Compile Include="BLLNhanVien.cs" />
     <Compile Include="BLLXuLy.cs" />
     <Compile Include="BLLNhaXuatBan.cs" />
     <Compile Include="BLLSach.cs" />

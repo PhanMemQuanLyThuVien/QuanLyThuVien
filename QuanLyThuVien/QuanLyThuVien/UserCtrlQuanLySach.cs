@@ -17,8 +17,10 @@ namespace QuanLyThuVien
     {
         BLLSach bLLSach = new BLLSach();
         BLLXuLy bLLXuLy = new BLLXuLy();
-        public UserCtrlQuanLySach()
+        private string emailNhanVien;
+        public UserCtrlQuanLySach(string emailNhanVien)
         {
+            this.emailNhanVien = emailNhanVien;
             InitializeComponent();
         }
 
@@ -96,7 +98,11 @@ namespace QuanLyThuVien
                 if (bLLSach.themSach(S))
                 {
                     MessageBox.Show("Thêm thành công!", "Thông báo");
-                    File.Copy(bLLXuLy.pathImage, bLLXuLy.duongDanLuuHinh, true);
+                    try
+                    {
+                        File.Copy(bLLXuLy.pathImage, bLLXuLy.duongDanLuuHinh, true);
+                    }
+                    catch { }
                     btnThemSach.Text = "Lưu";
                     enabledControls(false);
                 }
@@ -109,7 +115,11 @@ namespace QuanLyThuVien
                 if (bLLSach.capNhatSach(S))
                 {
                     MessageBox.Show("Cập nhật thành công!", "Thông báo");
-                    File.Copy(bLLXuLy.pathImage, bLLXuLy.duongDanLuuHinh, true);
+                    try
+                    {
+                        File.Copy(bLLXuLy.pathImage, bLLXuLy.duongDanLuuHinh, true);
+                    }
+                    catch { }
                     btnThemSach.Text = "Lưu";
                     enabledControls(false);
                 }
@@ -292,7 +302,7 @@ namespace QuanLyThuVien
                 MessageBox.Show("Vui lòng chọn sách để cho mượn!", "Thông báo");
                 return;
             }
-            frmChoMuonSach frm = new frmChoMuonSach(ma);
+            frmChoMuonSach frm = new frmChoMuonSach(ma,emailNhanVien);
             frm.ShowDialog();
         }
     }

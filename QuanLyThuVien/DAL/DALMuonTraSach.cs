@@ -16,5 +16,20 @@ namespace DAL
             return quanLyThuVienDataContext.MUONTRASACHes.Select(s => s).ToList<MUONTRASACH>();
         }
         
+        public bool themMuonSach(MUONTRASACH muon)
+        {
+            try
+            {
+                quanLyThuVienDataContext.MUONTRASACHes.InsertOnSubmit(muon);
+                quanLyThuVienDataContext.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+
+        public MUONTRASACH timSachThemVaoCuoiCung()
+        {
+            return quanLyThuVienDataContext.MUONTRASACHes.OrderByDescending(i=>i.IDMUON).First();
+        }
     }
 }

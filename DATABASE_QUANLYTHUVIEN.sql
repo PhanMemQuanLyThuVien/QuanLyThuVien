@@ -407,17 +407,12 @@ BEGIN
 END;
 
 --EXEC timSachTheoTen N'bài';
-SELECT * FROM dbo.MUONTRASACH
-SELECT * FROM dbo.CHITIETMUONTRA
-SELECT * FROM dbo.SACH
---SELECT * FROM dbo.DONVI
---SELECT * FROM dbo.TAIKHOAN WHERE EMAIL = 'lamchikhang.it@gmail.com'
-----xem chức vụ của từng nhân viên
---SELECT nv.HOTEN,nv.NGAYSINH,nv.GIOITINH,nv.EMAIL,nv.SODT,nv.CMND,nv.DIACHI,nv.NGAYVAOLAM,cv.TENCHUCVU
---FROM dbo.NHANVIEN nv, dbo.CHUCVU cv, dbo.TAIKHOAN tk
---WHERE tk.EMAIL = nv.EMAIL AND tk.CHUCVU = cv.ID
 
---SELECT * FROM dbo.DOCGIA
-SELECT * 
-FROM dbo.SACH
-WHERE TENSACH LIKE '%' + N'đắc' + '%'
+--SELECT * FROM dbo.MUONTRASACH
+--SELECT * FROM dbo.CHITIETMUONTRA
+
+--SELECT * FROM dbo.DONVI
+--WHERE ID = 2
+
+--SELECT * FROM dbo.NHANVIEN
+--WHERE EMAIL = N'lamchikhang.it@gmail.com'
