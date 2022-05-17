@@ -131,9 +131,9 @@
             this.pnNhapTT.Controls.Add(this.txtTenSach);
             this.pnNhapTT.Controls.Add(this.picAnhSach);
             this.pnNhapTT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnNhapTT.Location = new System.Drawing.Point(3, 29);
+            this.pnNhapTT.Location = new System.Drawing.Point(3, 26);
             this.pnNhapTT.Name = "pnNhapTT";
-            this.pnNhapTT.Size = new System.Drawing.Size(625, 681);
+            this.pnNhapTT.Size = new System.Drawing.Size(625, 684);
             this.pnNhapTT.TabIndex = 29;
             // 
             // btnChoMuon
@@ -241,7 +241,7 @@
             this.txtViTri.ForeColor = System.Drawing.Color.Black;
             this.txtViTri.Location = new System.Drawing.Point(226, 482);
             this.txtViTri.Name = "txtViTri";
-            this.txtViTri.Size = new System.Drawing.Size(304, 33);
+            this.txtViTri.Size = new System.Drawing.Size(304, 30);
             this.txtViTri.TabIndex = 56;
             // 
             // txtSoLuong
@@ -249,7 +249,7 @@
             this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
             this.txtSoLuong.Location = new System.Drawing.Point(226, 418);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(304, 33);
+            this.txtSoLuong.Size = new System.Drawing.Size(304, 30);
             this.txtSoLuong.TabIndex = 54;
             // 
             // lbSoLuong
@@ -266,7 +266,7 @@
             this.txtGia.ForeColor = System.Drawing.Color.Black;
             this.txtGia.Location = new System.Drawing.Point(226, 354);
             this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(304, 33);
+            this.txtGia.Size = new System.Drawing.Size(304, 30);
             this.txtGia.TabIndex = 52;
             // 
             // cboNXB
@@ -275,7 +275,7 @@
             this.cboNXB.FormattingEnabled = true;
             this.cboNXB.Location = new System.Drawing.Point(226, 162);
             this.cboNXB.Name = "cboNXB";
-            this.cboNXB.Size = new System.Drawing.Size(304, 33);
+            this.cboNXB.Size = new System.Drawing.Size(304, 31);
             this.cboNXB.TabIndex = 51;
             // 
             // cboTheLoai
@@ -284,7 +284,7 @@
             this.cboTheLoai.FormattingEnabled = true;
             this.cboTheLoai.Location = new System.Drawing.Point(226, 98);
             this.cboTheLoai.Name = "cboTheLoai";
-            this.cboTheLoai.Size = new System.Drawing.Size(304, 33);
+            this.cboTheLoai.Size = new System.Drawing.Size(304, 31);
             this.cboTheLoai.TabIndex = 50;
             // 
             // txtNamXB
@@ -292,7 +292,7 @@
             this.txtNamXB.ForeColor = System.Drawing.Color.Black;
             this.txtNamXB.Location = new System.Drawing.Point(226, 226);
             this.txtNamXB.Name = "txtNamXB";
-            this.txtNamXB.Size = new System.Drawing.Size(304, 33);
+            this.txtNamXB.Size = new System.Drawing.Size(304, 30);
             this.txtNamXB.TabIndex = 47;
             // 
             // btnThemSach
@@ -314,7 +314,7 @@
             this.cboTacGia.FormattingEnabled = true;
             this.cboTacGia.Location = new System.Drawing.Point(226, 290);
             this.cboTacGia.Name = "cboTacGia";
-            this.cboTacGia.Size = new System.Drawing.Size(304, 33);
+            this.cboTacGia.Size = new System.Drawing.Size(304, 31);
             this.cboTacGia.TabIndex = 44;
             // 
             // lbTacGia
@@ -389,7 +389,7 @@
             this.txtTenSach.ForeColor = System.Drawing.Color.Black;
             this.txtTenSach.Location = new System.Drawing.Point(226, 34);
             this.txtTenSach.Name = "txtTenSach";
-            this.txtTenSach.Size = new System.Drawing.Size(304, 33);
+            this.txtTenSach.Size = new System.Drawing.Size(304, 30);
             this.txtTenSach.TabIndex = 11;
             // 
             // picAnhSach
@@ -420,9 +420,9 @@
             this.pnDSSach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnDSSach.Controls.Add(this.dagirdDanhSachSach);
             this.pnDSSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnDSSach.Location = new System.Drawing.Point(3, 29);
+            this.pnDSSach.Location = new System.Drawing.Point(3, 26);
             this.pnDSSach.Name = "pnDSSach";
-            this.pnDSSach.Size = new System.Drawing.Size(658, 681);
+            this.pnDSSach.Size = new System.Drawing.Size(658, 684);
             this.pnDSSach.TabIndex = 29;
             // 
             // dagirdDanhSachSach
@@ -476,7 +476,7 @@
             this.dagirdDanhSachSach.RowHeadersWidth = 51;
             this.dagirdDanhSachSach.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.RoyalBlue;
             this.dagirdDanhSachSach.RowTemplate.Height = 24;
-            this.dagirdDanhSachSach.Size = new System.Drawing.Size(656, 679);
+            this.dagirdDanhSachSach.Size = new System.Drawing.Size(656, 682);
             this.dagirdDanhSachSach.TabIndex = 12;
             this.dagirdDanhSachSach.SelectionChanged += new System.EventHandler(this.dagirdDanhSachSach_SelectionChanged);
             // 
@@ -484,14 +484,16 @@
             // 
             this.MaSach.DataPropertyName = "ID";
             this.MaSach.HeaderText = "Mã";
+            this.MaSach.MinimumWidth = 6;
             this.MaSach.Name = "MaSach";
             this.MaSach.ReadOnly = true;
-            this.MaSach.Width = 81;
+            this.MaSach.Width = 67;
             // 
             // Hinh
             // 
             this.Hinh.DataPropertyName = "HINHSACH";
             this.Hinh.HeaderText = "Hinh";
+            this.Hinh.MinimumWidth = 6;
             this.Hinh.Name = "Hinh";
             this.Hinh.ReadOnly = true;
             this.Hinh.Visible = false;
@@ -501,6 +503,7 @@
             // 
             this.IDnxb.DataPropertyName = "IDNXB";
             this.IDnxb.HeaderText = "IDNXB";
+            this.IDnxb.MinimumWidth = 6;
             this.IDnxb.Name = "IDnxb";
             this.IDnxb.ReadOnly = true;
             this.IDnxb.Visible = false;
@@ -510,62 +513,70 @@
             // 
             this.TenSach.DataPropertyName = "TENSACH";
             this.TenSach.HeaderText = "Tên Sách";
+            this.TenSach.MinimumWidth = 6;
             this.TenSach.Name = "TenSach";
             this.TenSach.ReadOnly = true;
-            this.TenSach.Width = 128;
+            this.TenSach.Width = 116;
             // 
             // TenTheLoai
             // 
             this.TenTheLoai.DataPropertyName = "TENTHELOAI";
             this.TenTheLoai.HeaderText = "Thể Loại";
+            this.TenTheLoai.MinimumWidth = 6;
             this.TenTheLoai.Name = "TenTheLoai";
             this.TenTheLoai.ReadOnly = true;
-            this.TenTheLoai.Width = 124;
+            this.TenTheLoai.Width = 115;
             // 
             // NamXB
             // 
             this.NamXB.DataPropertyName = "NAMXB";
             this.NamXB.HeaderText = "Năm Xuất Bản";
+            this.NamXB.MinimumWidth = 6;
             this.NamXB.Name = "NamXB";
             this.NamXB.ReadOnly = true;
-            this.NamXB.Width = 141;
+            this.NamXB.Width = 161;
             // 
             // TenNXB
             // 
             this.TenNXB.DataPropertyName = "TENNXB";
             this.TenNXB.HeaderText = "Nhà Xuất Bản";
+            this.TenNXB.MinimumWidth = 6;
             this.TenNXB.Name = "TenNXB";
             this.TenNXB.ReadOnly = true;
-            this.TenNXB.Width = 173;
+            this.TenNXB.Width = 156;
             // 
             // TenTacGia
             // 
             this.TenTacGia.DataPropertyName = "BUTDANH";
             this.TenTacGia.HeaderText = "Tác Giả";
+            this.TenTacGia.MinimumWidth = 6;
             this.TenTacGia.Name = "TenTacGia";
             this.TenTacGia.ReadOnly = true;
-            this.TenTacGia.Width = 84;
+            this.TenTacGia.Width = 107;
             // 
             // Gia
             // 
             this.Gia.DataPropertyName = "GIA";
             this.Gia.HeaderText = "Giá";
+            this.Gia.MinimumWidth = 6;
             this.Gia.Name = "Gia";
             this.Gia.ReadOnly = true;
-            this.Gia.Width = 81;
+            this.Gia.Width = 70;
             // 
             // SoLuong
             // 
             this.SoLuong.DataPropertyName = "SOLUONGSACH";
             this.SoLuong.HeaderText = "Số Lượng";
+            this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.ReadOnly = true;
-            this.SoLuong.Width = 132;
+            this.SoLuong.Width = 121;
             // 
             // IDTacGia
             // 
             this.IDTacGia.DataPropertyName = "IDTACGIA";
             this.IDTacGia.HeaderText = "IDTACGIA";
+            this.IDTacGia.MinimumWidth = 6;
             this.IDTacGia.Name = "IDTacGia";
             this.IDTacGia.ReadOnly = true;
             this.IDTacGia.Visible = false;
@@ -575,6 +586,7 @@
             // 
             this.IDTheLoai.DataPropertyName = "IDTHELOAI";
             this.IDTheLoai.HeaderText = "IDTHELOAI";
+            this.IDTheLoai.MinimumWidth = 6;
             this.IDTheLoai.Name = "IDTheLoai";
             this.IDTheLoai.ReadOnly = true;
             this.IDTheLoai.Visible = false;
@@ -584,9 +596,10 @@
             // 
             this.ViTri.DataPropertyName = "VITRISACH";
             this.ViTri.HeaderText = "Vị Trí";
+            this.ViTri.MinimumWidth = 6;
             this.ViTri.Name = "ViTri";
             this.ViTri.ReadOnly = true;
-            this.ViTri.Width = 95;
+            this.ViTri.Width = 89;
             // 
             // tableLayoutPanelTimKiem
             // 
@@ -595,7 +608,7 @@
             this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
             this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 661F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 663F));
             this.tableLayoutPanelTimKiem.Controls.Add(this.txtTim, 1, 0);
             this.tableLayoutPanelTimKiem.Controls.Add(this.btnTim, 2, 0);
             this.tableLayoutPanelTimKiem.Controls.Add(this.btnLoadAll, 0, 0);
@@ -614,7 +627,7 @@
             this.txtTim.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtTim.Location = new System.Drawing.Point(88, 3);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(227, 33);
+            this.txtTim.Size = new System.Drawing.Size(225, 30);
             this.txtTim.TabIndex = 18;
             // 
             // btnTim
@@ -623,7 +636,7 @@
             this.btnTim.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(321, 3);
+            this.btnTim.Location = new System.Drawing.Point(319, 3);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(141, 33);
             this.btnTim.TabIndex = 19;
@@ -647,7 +660,7 @@
             // 
             // UserCtrlQuanLySach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.gpboxNhapTT);

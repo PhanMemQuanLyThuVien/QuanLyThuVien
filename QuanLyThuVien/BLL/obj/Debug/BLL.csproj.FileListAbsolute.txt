@@ -10,3 +10,15 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\DTO.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\DTO.dll.config
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\BLL\obj\Debug\BLL.csproj.CopyComplete
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+D:\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\BLL.dll
+D:\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\BLL.pdb
+D:\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\DAL.dll
+D:\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\DTO.dll
+D:\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\DAL.pdb
+D:\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\DTO.pdb
+D:\QuanLyThuVien\QuanLyThuVien\BLL\bin\Debug\DTO.dll.config
+D:\QuanLyThuVien\QuanLyThuVien\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\QuanLyThuVien\QuanLyThuVien\BLL\obj\Debug\BLL.dll
+D:\QuanLyThuVien\QuanLyThuVien\BLL\obj\Debug\BLL.pdb
+D:\QuanLyThuVien\QuanLyThuVien\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\QuanLyThuVien\QuanLyThuVien\BLL\obj\Debug\BLL.csproj.CopyComplete

@@ -5,3 +5,10 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.csproj.Co
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.dll
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.pdb
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+D:\QuanLyThuVien\QuanLyThuVien\DTO\bin\Debug\DTO.dll.config
+D:\QuanLyThuVien\QuanLyThuVien\DTO\bin\Debug\DTO.dll
+D:\QuanLyThuVien\QuanLyThuVien\DTO\bin\Debug\DTO.pdb
+D:\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.dll
+D:\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.pdb
+D:\QuanLyThuVien\QuanLyThuVien\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache

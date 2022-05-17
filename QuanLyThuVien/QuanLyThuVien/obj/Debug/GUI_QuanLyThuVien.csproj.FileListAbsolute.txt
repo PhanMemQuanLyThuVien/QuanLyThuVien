@@ -55,3 +55,31 @@ E:\PTPM Thông Minh\DOAN\QuanLyThuVien3\QuanLyThuVien\QuanLyThuVien\QuanLyThuVie
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien3\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.CopyComplete
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien3\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 E:\PTPM Thông Minh\DOAN\QuanLyThuVien3\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\BLL.dll
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO.dll
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DAL.dll
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\BLL.pdb
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO.pdb
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DTO.dll.config
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\ThuVienControl.pdb
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\bin\Debug\DAL.pdb
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.AssemblyReference.cache
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmChiTietDocGia.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmChoMuonSach.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmLogin.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmMain.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyDocGia.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyMuonTra.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLyThuThu.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlQuanLySach.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlThongTinQuanTri.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.UserCtrlThongTinThuThu.resources
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.GenerateResource.cache
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\GUI_QuanLyThuVien.csproj.CoreCompileInputs.cache
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+D:\QuanLyThuVien\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmChiTietNhanVien.resources
