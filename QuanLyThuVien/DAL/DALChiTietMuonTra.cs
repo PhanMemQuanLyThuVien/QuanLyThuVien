@@ -26,5 +26,33 @@ namespace DAL
             }
             catch { return false; }
         }
+
+        public bool suaChiTietMuonTra(int maChiTietMuon, int idNV)
+        {
+            try
+            {
+                CHITIETMUONTRA cHITIETMUONTRA = quanLyThuVienDataContext.CHITIETMUONTRAs.Where(i => i.IDCHITIETMUON == maChiTietMuon).SingleOrDefault();
+                cHITIETMUONTRA.TINHTRANG = true;
+                cHITIETMUONTRA.IDTHUTHUNHANTRA = idNV;
+                DALSach dalSach = new DALSach();
+                dalSach.capNhatSoLuongSachTra(cHITIETMUONTRA.IDSACH, cHITIETMUONTRA.SOLUONGMUON);
+                quanLyThuVienDataContext.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
+
+        public bool suaChiTietMuonTra_MaMuon(int maMuon, int idNV)
+        {
+            try
+            {
+                CHITIETMUONTRA cHITIETMUONTRA = quanLyThuVienDataContext.CHITIETMUONTRAs.Where(i => i.IDMUON == maMuon).SingleOrDefault();
+                cHITIETMUONTRA.TINHTRANG = true;
+                cHITIETMUONTRA.IDTHUTHUNHANTRA = idNV;
+                quanLyThuVienDataContext.SubmitChanges();
+                return true;
+            }
+            catch { return false; }
+        }
     }
 }

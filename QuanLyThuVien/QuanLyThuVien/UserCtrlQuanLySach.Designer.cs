@@ -608,7 +608,7 @@
             this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
             this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 663F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 665F));
             this.tableLayoutPanelTimKiem.Controls.Add(this.txtTim, 1, 0);
             this.tableLayoutPanelTimKiem.Controls.Add(this.btnTim, 2, 0);
             this.tableLayoutPanelTimKiem.Controls.Add(this.btnLoadAll, 0, 0);
@@ -625,9 +625,9 @@
             this.txtTim.BackColor = System.Drawing.Color.White;
             this.txtTim.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtTim.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtTim.Location = new System.Drawing.Point(88, 3);
+            this.txtTim.Location = new System.Drawing.Point(87, 3);
             this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(225, 30);
+            this.txtTim.Size = new System.Drawing.Size(224, 30);
             this.txtTim.TabIndex = 18;
             // 
             // btnTim
@@ -636,7 +636,7 @@
             this.btnTim.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(319, 3);
+            this.btnTim.Location = new System.Drawing.Point(317, 3);
             this.btnTim.Name = "btnTim";
             this.btnTim.Size = new System.Drawing.Size(141, 33);
             this.btnTim.TabIndex = 19;
@@ -652,7 +652,7 @@
             this.btnLoadAll.ForeColor = System.Drawing.Color.White;
             this.btnLoadAll.Location = new System.Drawing.Point(3, 3);
             this.btnLoadAll.Name = "btnLoadAll";
-            this.btnLoadAll.Size = new System.Drawing.Size(79, 33);
+            this.btnLoadAll.Size = new System.Drawing.Size(78, 33);
             this.btnLoadAll.TabIndex = 20;
             this.btnLoadAll.Text = "Load";
             this.btnLoadAll.UseVisualStyleBackColor = false;

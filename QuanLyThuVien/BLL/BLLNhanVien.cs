@@ -5,76 +5,96 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using DTO;
-
 namespace BLL
 {
     public class BLLNhanVien
     {
         DALNhanVien dALNhanVien = new DALNhanVien();
+        BLLTaiKhoan bLLTaiKhoan = new BLLTaiKhoan();
         public BLLNhanVien() { }
 
         public int timIDNhanVien(string email)
         {
             return dALNhanVien.timIDNhanVien(email);
         }
-        public NHANVIEN nhanVienTheoID(int id)
+
+        public string timTenNhanVienTheoID(int id)
         {
-            return lstNhanVien().Where(nv => nv.ID == id).Single();
+            return dALNhanVien.timTenNhanVienTheoID(id);
         }
-        //public List<NHANVIEN> loadNV()
-        //{
-        //    return dALNhanVien.lstNhanVien();
-        //}
+
+        public NHANVIEN timNhanVienTheoID(int id)
+        {
+            NHANVIEN nv = dALNhanVien.lstNhanVien().Where(i=>i.ID==id).SingleOrDefault();
+            nv.gioiTinh = "Nữ";
+            if (nv.GIOITINH == true)
+                nv.gioiTinh = "Nam";
+            nv.tinhTrangHoatDong = "Ngừng hoạt động";
+            if (bLLTaiKhoan.trangThaiTaiKhoan(nv.EMAIL.Trim()))
+                nv.tinhTrangHoatDong = "Đang hoạt động";
+            return nv;
+        }
+
         public List<NHANVIEN> lstNhanVien()
         {
-            List<NHANVIEN> nhanViens = dALNhanVien.lstNhanVien();
-            var listNV = (from nv in nhanViens
-                          select new
-                          {
-                              nv.ID,
-                              nv.HOTEN,
-                              nv.NGAYSINH,
-                              nv.GIOITINH,
-                              nv.EMAIL,
-                              nv.SODT,
-                              nv.CMND,
-                              nv.DIACHI,
-                              nv.NGAYVAOLAM
-                          }).ToList();
-            List<NHANVIEN> lstNV = new List<NHANVIEN>();
-            foreach (var item in listNV)
+            List<NHANVIEN> nhanViens = new List<NHANVIEN>();
+            foreach (NHANVIEN item in dALNhanVien.lstNhanVien())
             {
-                NHANVIEN nv = new NHANVIEN();
-                nv.ID = item.ID;
-                nv.HOTEN = item.HOTEN;
-                nv.NGAYSINH = item.NGAYSINH;
-                nv.GIOITINH = item.GIOITINH;
+                //chức vụ quản lý thì ko lấy
+                if (bLLTaiKhoan.chucVuTaiKhoan(item.EMAIL.Trim()) == 1)
+                    continue;
+
+                item.gioiTinh = "Nữ";
                 if (item.GIOITINH == true)
-                    nv.gioiTinhString = "Nam";
-                else
-                    nv.gioiTinhString = "Nữ";
-                nv.EMAIL = item.EMAIL;
-                nv.SODT = item.SODT;
-                nv.CMND = item.CMND;
-                nv.DIACHI = item.DIACHI;
-                nv.NGAYVAOLAM = item.NGAYVAOLAM;
-                lstNV.Add(nv);
+                    item.gioiTinh = "Nam";
+                item.tinhTrangHoatDong = "Ngừng hoạt động";
+                if (bLLTaiKhoan.trangThaiTaiKhoan(item.EMAIL.Trim()))
+                    item.tinhTrangHoatDong = "Đang hoạt động";
+                nhanViens.Add(item);
             }
-            return lstNV;
-        }
-        public bool themNhanVien(NHANVIEN nhanVien)
-        {
-            return dALNhanVien.themNhanVien(nhanVien);
+            return nhanViens;
         }
 
-        public bool xoaNhanVien(int maNV)
+        public List<NHANVIEN> lstNhanVien_TheoSDT(string soDT)
         {
-            return dALNhanVien.xoaNhanVien(maNV);
+            List<NHANVIEN> nhanViens = new List<NHANVIEN>();
+            foreach (NHANVIEN item in dALNhanVien.lstNhanVien())
+            {
+                //chức vụ quản lý thì ko lấy
+                if (bLLTaiKhoan.chucVuTaiKhoan(item.EMAIL.Trim()) == 1)
+                    continue;
+                if (!item.SODT.Trim().Equals(soDT))
+                    continue;
+                item.gioiTinh = "Nữ";
+                if (item.GIOITINH == true)
+                    item.gioiTinh = "Nam";
+                item.tinhTrangHoatDong = "Ngừng hoạt động";
+                if (bLLTaiKhoan.trangThaiTaiKhoan(item.EMAIL.Trim()))
+                    item.tinhTrangHoatDong = "Đang hoạt động";
+                nhanViens.Add(item);
+            }
+            return nhanViens;
         }
 
-        public bool capNhatNhanVien(NHANVIEN nhanVien)
+        public bool ngungHoatDongNhanVien(string email)
         {
-            return dALNhanVien.capNhatNhanVien(nhanVien);
+            return new DALTaiKhoan().ngungHoatDongTK(email);
+        }
+
+        public bool hoatDongNhanVien(string email)
+        {
+            return new DALTaiKhoan().hoatDongTK(email);
+        }
+
+        public bool capNhatNV(NHANVIEN nv)
+        {
+            return dALNhanVien.capNhatNhanVien(nv);
+        }
+
+        public bool themNhanVien(NHANVIEN nv)
+        {
+            return dALNhanVien.themNhanVien(nv);
         }
     }
+
 }

@@ -8,6 +8,7 @@ namespace DTO
 {
     partial class NHANVIEN
     {
-        public string gioiTinhString { get; set; }
+        public string gioiTinh { get; set; }
+        public string tinhTrangHoatDong { get; set; }
     }
 }

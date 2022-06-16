@@ -15,10 +15,12 @@ namespace QuanLyThuVien
     {
         private int maSach;
         private string emailNhanVien;
-        public frmChoMuonSach(int maSach, string emailNhanVien)
+        private UserControlQLSach userControlQLSach;
+        public frmChoMuonSach(int maSach, string emailNhanVien, UserControlQLSach userControlQLSach)
         {
             this.emailNhanVien = emailNhanVien;
             this.maSach = maSach;
+            this.userControlQLSach = userControlQLSach;
             InitializeComponent();
         }
 
@@ -49,7 +51,11 @@ namespace QuanLyThuVien
         {
             if (!kTNhap())
                 return;
-
+            DialogResult r = MessageBox.Show("Xác nhận cho mượn sách!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.No)
+            {
+                return;
+            }
             int idThuThu = new BLLNhanVien().timIDNhanVien(emailNhanVien);
             int soLuongMuon = int.Parse(txtSoLuongMuon.Text);
             double tienTheChan = int.Parse(txtTienTheChan.Text);
@@ -57,6 +63,12 @@ namespace QuanLyThuVien
             {
                 xoaDocGia();
                 MessageBox.Show("Cho mượn thành công!");
+                userControlQLSach.loadSachs();
+                WordExport wordExport = new WordExport();
+                DateTime dtime = DateTime.Now;
+                wordExport.PhieuMuonSach(dtime.Day.ToString(), dtime.Month.ToString(), dtime.Year.ToString(),
+                    dOCGIA.HOTEN, dOCGIA.IDMASOTHE.ToString(), sach.TENSACH, sach.BUTDANH, soLuongMuon.ToString());
+                this.Visible = false;
             }
             else
             {
@@ -114,11 +126,15 @@ namespace QuanLyThuVien
                 MessageBox.Show("Số lượng sách trong kho không đủ!");
                 return false;
             }
-            if(new BLLChiTietMuonTra().soLuongSachDGDaMuon(dOCGIA.IDMASOTHE) >= 3)
+            try
             {
-                MessageBox.Show("Độc giả "+dOCGIA.HOTEN+" đã mượn 3 quyển sách.\nQui định không được vượt quá 3 quyển sách!");
-                return false;
+                if (new BLLChiTietMuonTra().soLuongSachDGDaMuon(dOCGIA.IDMASOTHE) >= 3)
+                {
+                    MessageBox.Show("Độc giả " + dOCGIA.HOTEN + " đã mượn 3 quyển sách.\nQui định không được vượt quá 3 quyển sách!");
+                    return false;
+                }
             }
+            catch { return true; }
             return true;
         }
 
@@ -132,11 +148,11 @@ namespace QuanLyThuVien
             }
             try
             {
-                dOCGIA = new BLLDocGia().docGiaTheoMa(int.Parse(txtTim.Text));
+                dOCGIA = new BLLDocGia().docGiaTheoSDT(txtTim.Text.Trim());
                 if (dOCGIA == null)
                 {
                     txtTim.Focus();
-                    MessageBox.Show("Không tìm thấy độc giả có mã số độc giả " + txtTim.Text + ".\nVui lòng nhập lại!", "Thông báo");
+                    MessageBox.Show("Không tìm thấy độc giả có số điện thoại " + txtTim.Text + ".\nVui lòng nhập lại!", "Thông báo");
                     return;
                 }
                 
@@ -154,7 +170,7 @@ namespace QuanLyThuVien
                 }
                 catch { }
             }
-            catch(Exception ex)
+            catch
             {
                 MessageBox.Show("Không tìm thấy độc giả có mã số độc giả " + txtTim.Text + ".\nVui lòng nhập lại!", "Thông báo");
             }

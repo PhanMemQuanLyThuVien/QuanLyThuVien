@@ -95,9 +95,16 @@ namespace BLL
 
         public SACH timSachTheoMa(int maID)
         {
-            SACH sach = dALSach.timSachTheoMaID(maID);
-            sach.BUTDANH = dALTacGia.timTacGiaTheoMa(sach.IDTACGIA).BUTDANH;
-            return sach;
+            try
+            {
+                SACH sach = dALSach.timSachTheoMaID(maID);
+                sach.BUTDANH = dALTacGia.timTacGiaTheoMa(sach.IDTACGIA).BUTDANH;
+                return sach;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }

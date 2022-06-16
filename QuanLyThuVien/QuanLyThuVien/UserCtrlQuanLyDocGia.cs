@@ -127,11 +127,11 @@ namespace QuanLyThuVien
             }
             try
             {
-                DOCGIA docGia = bLLDocGia.docGiaTheoMa(int.Parse(txtTim.Text));
+                DOCGIA docGia = bLLDocGia.docGiaTheoSDT(txtTim.Text.Trim());
                 if (docGia == null)
                 {
                     txtTim.Focus();
-                    MessageBox.Show("Không tìm thấy độc giả có mã số độc giả " + txtTim.Text + ".\nVui lòng nhập lại!", "Thông báo");
+                    MessageBox.Show("Không tìm thấy độc giả có số điện thoại " + txtTim.Text + ".\nVui lòng nhập lại!", "Thông báo");
                     return;
                 }
                 
@@ -141,7 +141,7 @@ namespace QuanLyThuVien
             catch
             {
                 txtTim.Focus();
-                MessageBox.Show("Vui lòng nhập mã số độc giả!", "Thông báo");
+                MessageBox.Show("Vui lòng nhập số điện thoại độc giả!", "Thông báo");
             }
         }
 
@@ -164,6 +164,14 @@ namespace QuanLyThuVien
             }
             frmChiTietDocGia frmChiTietDG = new frmChiTietDocGia(this, int.Parse(dagirdDanhSachDocGia.CurrentRow.Cells["MaSoThe"].Value.ToString()));
             frmChiTietDG.ShowDialog();
+        }
+
+        private void txtTim_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

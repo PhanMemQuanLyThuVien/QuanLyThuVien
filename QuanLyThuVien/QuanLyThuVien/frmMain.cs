@@ -22,69 +22,90 @@ namespace QuanLyThuVien
         
         private void frmMain_Load(object sender, EventArgs e)
         {
-            phanQuyenMenu(menuStripQuanLy, bLLTaiKhoan.getMaChucVuTaiKhoan(emailNhanVien));
-            addUserControl(new UserCtrlQuanLySach(emailNhanVien));
+            phanQuyenMenu(bLLTaiKhoan.getMaChucVuTaiKhoan(emailNhanVien));
+            
         }
 
-        private void phanQuyenMenu(MenuStrip menuStripQL, string maChucVu)
+        private void phanQuyenMenu(string maChucVu)
         {
-            for (int i = 0; i < menuStripQL.Items.Count; i++)
+            foreach (Control control in panelMenu.Controls)
             {
-                //nếu tag == 0 thì tất cả điều có quyền
-                if (menuStripQL.Items[i].Tag.Equals("0"))
-                    continue;
-                if (!menuStripQL.Items[i].Tag.Equals(maChucVu))
-                    menuStripQL.Items[i].Visible = false;                
+                if(control is Bunifu.UI.WinForms.BunifuButton.BunifuButton)
+                {
+                    if(control.Tag.ToString().Equals(maChucVu)
+                        && maChucVu.Equals("1"))
+                    {
+                        btnQLSach.Visible = false;
+                        btnQLMuonTra.Visible = false;
+                        btnQLDocGia.Visible = false;
+                    }else if (control.Tag.ToString().Equals(maChucVu)
+                        && maChucVu.Equals("2"))
+                    {
+                        btnQLTT.Visible = false;
+                    }
+                }
+            }
+            addUserControl(new UserControlQLSach(emailNhanVien));
+            if (maChucVu.Equals("1"))
+            {
+                addUserControl(new UserCtrlQuanLyThuThu());
             }
         }
 
         private void addUserControl(UserControl userCtrl)
         {
-            userCtrl.Dock = DockStyle.Fill;            
-            pnChucNang.Controls.Clear();
-            pnChucNang.Controls.Add(userCtrl);
+            userCtrl.Dock = DockStyle.Fill;
+            panelChildFrom.Controls.Clear();
+            panelChildFrom.Controls.Add(userCtrl);
+        }
+        
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                Environment.Exit(0);
+            }
+            catch { }
         }
 
-        private void QuanLyThuThuToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnQLTT_Click(object sender, EventArgs e)
         {
             addUserControl(new UserCtrlQuanLyThuThu());
         }
 
-        private void QuanLySachToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnQLSach_Click(object sender, EventArgs e)
         {
-            addUserControl(new UserCtrlQuanLySach(emailNhanVien));
+            addUserControl(new UserControlQLSach(emailNhanVien));
         }
 
-        private void QuanLyMuonTraToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnQLMuonTra_Click(object sender, EventArgs e)
         {
-            addUserControl(new UserCtrlQuanLyMuonTra());
+            addUserControl(new UserCtrlQuanLyMuonTra(emailNhanVien));
         }
 
-        private void QuanLyDocGiaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnQLDocGia_Click(object sender, EventArgs e)
         {
             addUserControl(new UserCtrlQuanLyDocGia());
         }
 
-        private void ThongTinQuanTriToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnThongTinQT_Click(object sender, EventArgs e)
         {
-            addUserControl(new UserCtrlThongTinQuanTri());
+            frmThongTinBanThan frm = new frmThongTinBanThan(emailNhanVien);
+            frm.ShowDialog();
         }
 
-        private void ThongTinThuThuToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void btnGioiThieu_Click(object sender, EventArgs e)
         {
-            addUserControl(new UserCtrlThongTinThuThu());
+            addUserControl(new UserControlGioiThieu());
         }
 
-        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
             frmLogin frm = new frmLogin();
             this.Visible = false;
             frm.Show();
-        }
-
-        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
         }
     }
 }

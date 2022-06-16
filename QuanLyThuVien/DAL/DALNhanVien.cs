@@ -15,66 +15,52 @@ namespace DAL
         {
             return quanLyThuVienDataContext.NHANVIENs.Where(i => i.EMAIL.Trim() == email.Trim()).Single().ID;
         }
+
+        public string timTenNhanVienTheoID(int id)
+        {
+            return quanLyThuVienDataContext.NHANVIENs.Where(i => i.ID == id).Single().HOTEN;
+        }
+
         public List<NHANVIEN> lstNhanVien()
         {
-            return quanLyThuVienDataContext.NHANVIENs.Select(nv => nv).ToList<NHANVIEN>();
+            return quanLyThuVienDataContext.NHANVIENs.Select(i => i).ToList<NHANVIEN>();
         }
-        //public List<NHANVIEN> LoadNhanVienTheoID(string id)
-        //{
-        //    return quanLyThuVienDataContext.NHANVIENs.Where(t => t.ID.Equals(id)).Select(t => t).ToList();
-        //}
-        public bool themNhanVien(NHANVIEN nhanVien)
+
+        public bool capNhatNhanVien(NHANVIEN nv)
         {
             try
             {
-                quanLyThuVienDataContext.NHANVIENs.InsertOnSubmit(nhanVien);
-                quanLyThuVienDataContext.SubmitChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        public bool xoaNhanVien(int maNV)
-        {
-            try
-            {
-                NHANVIEN nHANVIEN = quanLyThuVienDataContext.NHANVIENs.Where(nv => nv.ID == maNV).Single();
-                quanLyThuVienDataContext.NHANVIENs.DeleteOnSubmit(nHANVIEN);
-                quanLyThuVienDataContext.SubmitChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        public bool capNhatNhanVien(NHANVIEN nhanVien)
-        {
-            try
-            {
-                NHANVIEN nv = quanLyThuVienDataContext.NHANVIENs.Where(nV => nV.ID == nhanVien.ID).Single();
-                //nv = nhanVien;
-                nv.HOTEN = nhanVien.HOTEN;
-                nv.NGAYSINH = nhanVien.NGAYSINH;
-                nv.GIOITINH = nhanVien.GIOITINH;
-                nv.EMAIL = nhanVien.EMAIL;
-                nv.SODT = nhanVien.SODT;
-                nv.CMND = nhanVien.CMND;
-                nv.DIACHI = nhanVien.DIACHI;
-                nv.NGAYVAOLAM = nhanVien.NGAYVAOLAM;
-
+                NHANVIEN nvCapNhat = quanLyThuVienDataContext.NHANVIENs.Where(i => i.ID == nv.ID).Single();
+                nvCapNhat.HOTEN = nv.HOTEN;
+                nvCapNhat.NGAYSINH = nv.NGAYSINH;
+                nvCapNhat.SODT = nv.SODT;
+                nvCapNhat.GIOITINH = nv.GIOITINH;
+                nvCapNhat.NGAYVAOLAM = nv.NGAYVAOLAM;
+                nvCapNhat.DIACHI = nv.DIACHI;
+                nvCapNhat.CMND = nv.CMND;
 
                 quanLyThuVienDataContext.SubmitChanges();
                 return true;
             }
-            catch
-            {
-                return false;
-            }
+            catch { return false; }
         }
+
+        public bool themNhanVien(NHANVIEN nv)
+        {
+            try
+            {
+                quanLyThuVienDataContext.NHANVIENs.InsertOnSubmit(nv);
+                quanLyThuVienDataContext.SubmitChanges();
+                TAIKHOAN tk = new TAIKHOAN();
+                tk.EMAIL = nv.EMAIL;
+                tk.MATKHAU = nv.EMAIL;
+                tk.CHUCVU = 2;
+                tk.TRANGTHAI = true;
+                new DALTaiKhoan().themTaiKhoan(tk);               
+                return true;
+            }
+            catch { return false; }
+        }
+
     }
 }

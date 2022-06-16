@@ -40,7 +40,11 @@ namespace DAL
 
         public SACH timSachTheoMaID(int maID)
         {
-            return quanLyThuVienDataContext.SACHes.Where(s => s.ID == maID).Single();
+            try
+            {
+                return quanLyThuVienDataContext.SACHes.Where(s => s.ID == maID).Single();
+            }
+            catch { return null; }
         }
 
         public bool themSach(SACH S)
@@ -71,6 +75,36 @@ namespace DAL
                 S.NAMXB = sach.NAMXB;
                 S.VITRISACH = sach.VITRISACH;
                 S.HINHSACH = sach.HINHSACH;
+                quanLyThuVienDataContext.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool capNhatSoLuongSachChoMuon(int MaSach, int soLuong)
+        {
+            try
+            {
+                SACH S = quanLyThuVienDataContext.SACHes.Where(sachs => sachs.ID == MaSach).SingleOrDefault();
+                S.SOLUONGSACH -= soLuong;                
+                quanLyThuVienDataContext.SubmitChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool capNhatSoLuongSachTra(int MaSach, int soLuong)
+        {
+            try
+            {
+                SACH S = quanLyThuVienDataContext.SACHes.Where(sachs => sachs.ID == MaSach).SingleOrDefault();
+                S.SOLUONGSACH += soLuong;
                 quanLyThuVienDataContext.SubmitChanges();
                 return true;
             }

@@ -120,7 +120,7 @@ namespace QuanLyThuVien
             txtCMND.Enabled = txtDiaChi.Enabled = txtEmai.Enabled = enabled;
             txtHoTenDG.Enabled = txtSoDT.Enabled = enabled;
             dateTimePickerNgayHetHan.Enabled = dateTimePickerNgayLap.Enabled = dateTimePickerNgaySinh.Enabled= enabled;
-            btnChonHinhDG.Enabled = rdoNam.Enabled = rdoNu.Enabled = cboDonVi.Enabled = enabled;
+            btnChonHinh.Enabled = rdoNam.Enabled = rdoNu.Enabled = cboDonVi.Enabled = enabled;
         }
 
         string nameImageDocGia = string.Empty;
@@ -138,6 +138,136 @@ namespace QuanLyThuVien
                     picAnhDG.Image = Image.FromFile(pathImage);
                 }
             }
+        }
+
+        private void dateTimePickerNgayHetHan_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerNgayLap_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbMaSoThe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaSoThe_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerNgaySinh_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnNhapTT_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbDonVi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbGioiTinh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboDonVi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoNam_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoNu_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbDiaChi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbSDT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbCMND_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNgaySinh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbHoTen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHoTenDG_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picAnhDG_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

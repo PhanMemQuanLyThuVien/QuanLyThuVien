@@ -25,5 +25,23 @@ namespace BLL
             //mã 2: Thủ thư
             return dALTaiKhoan.getTaiKhoan(email).CHUCVU.ToString();
         }
+
+        public bool trangThaiTaiKhoan(string email)
+        {
+            return dALTaiKhoan.getTaiKhoan(email).TRANGTHAI;
+        }
+
+        public int chucVuTaiKhoan(string email)
+        {
+            //mã 1: Quản lý
+            //mã 2: Thủ thư
+            return dALTaiKhoan.getTaiKhoan(email).CHUCVU;
+        }
+
+        public bool doiMatKhau(string email, string matkhauMoi)
+        {
+            return dALTaiKhoan.doiMatKhau(email, matkhauMoi);
+        }
+
     }
 }

@@ -67,6 +67,10 @@ namespace BLL
         {
             return lstDocGia().Where(dg => dg.IDMASOTHE == maDG).Single();
         }
+        public DOCGIA docGiaTheoSDT(string soDT)
+        {
+            return lstDocGia().Where(dg => dg.SODT.Trim().Equals(soDT)).Single();
+        }
 
         public bool themDocGia(DOCGIA docGia)
         {

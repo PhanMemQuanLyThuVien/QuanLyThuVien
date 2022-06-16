@@ -21,5 +21,10 @@ namespace BLL
         {
             return dALMuonTra.timSachThemVaoCuoiCung();
         }
+
+        public List<MUONTRASACH> lstMuonSachTheoMaDG(int maDG)
+        {
+            return dALMuonTra.lstMuonTraSach().Where(i => i.IDMATHEDOCGIA == maDG).ToList<MUONTRASACH>();
+        }
     }
 }

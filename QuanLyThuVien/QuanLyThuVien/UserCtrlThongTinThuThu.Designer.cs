@@ -28,11 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnNhapTT = new System.Windows.Forms.Panel();
+            this.txtSoDT = new ThuVienControl.txtSo();
+            this.lbSDT = new System.Windows.Forms.Label();
+            this.txtEmai = new ThuVienControl.txtEmail();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbGioiTinh = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdoNam = new System.Windows.Forms.RadioButton();
+            this.rdoNu = new System.Windows.Forms.RadioButton();
+            this.dateTimePickerNVL = new System.Windows.Forms.DateTimePicker();
             this.txtCMND = new ThuVienControl.txtSo();
             this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnThemThuThu = new System.Windows.Forms.Button();
@@ -47,21 +56,6 @@
             this.tabCtrolQuanLyThuThu = new System.Windows.Forms.TabControl();
             this.tabPageThongTinThuThu = new System.Windows.Forms.TabPage();
             this.dagirdDanhSachThuThu = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanelTimKiem = new System.Windows.Forms.TableLayoutPanel();
-            this.txtTim = new System.Windows.Forms.TextBox();
-            this.btnTim = new System.Windows.Forms.Button();
-            this.btnXemChiTietThuThu = new System.Windows.Forms.Button();
-            this.btnLoadAll = new System.Windows.Forms.Button();
-            this.tabPageThemTT = new System.Windows.Forms.TabPage();
-            this.dateTimePickerNVL = new System.Windows.Forms.DateTimePicker();
-            this.lbGioiTinh = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rdoNam = new System.Windows.Forms.RadioButton();
-            this.rdoNu = new System.Windows.Forms.RadioButton();
-            this.txtEmai = new ThuVienControl.txtEmail();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.txtSoDT = new ThuVienControl.txtSo();
-            this.lbSDT = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,14 +65,20 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanelTimKiem = new System.Windows.Forms.TableLayoutPanel();
+            this.txtTim = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.btnXemChiTietThuThu = new System.Windows.Forms.Button();
+            this.btnLoadAll = new System.Windows.Forms.Button();
+            this.tabPageThemTT = new System.Windows.Forms.TabPage();
             this.pnNhapTT.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.gpboxNhapTT.SuspendLayout();
             this.tabCtrolQuanLyThuThu.SuspendLayout();
             this.tabPageThongTinThuThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dagirdDanhSachThuThu)).BeginInit();
             this.tableLayoutPanelTimKiem.SuspendLayout();
             this.tabPageThemTT.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnNhapTT
@@ -106,6 +106,97 @@
             this.pnNhapTT.Name = "pnNhapTT";
             this.pnNhapTT.Size = new System.Drawing.Size(1275, 682);
             this.pnNhapTT.TabIndex = 29;
+            // 
+            // txtSoDT
+            // 
+            this.txtSoDT.ForeColor = System.Drawing.Color.Black;
+            this.txtSoDT.Location = new System.Drawing.Point(392, 348);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.Size = new System.Drawing.Size(414, 30);
+            this.txtSoDT.TabIndex = 56;
+            // 
+            // lbSDT
+            // 
+            this.lbSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSDT.Location = new System.Drawing.Point(387, 320);
+            this.lbSDT.Name = "lbSDT";
+            this.lbSDT.Size = new System.Drawing.Size(419, 25);
+            this.lbSDT.TabIndex = 55;
+            this.lbSDT.Text = "Số Điện Thoại:";
+            // 
+            // txtEmai
+            // 
+            this.txtEmai.ForeColor = System.Drawing.Color.Black;
+            this.txtEmai.Location = new System.Drawing.Point(392, 287);
+            this.txtEmai.Name = "txtEmai";
+            this.txtEmai.Size = new System.Drawing.Size(414, 30);
+            this.txtEmai.TabIndex = 54;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(387, 259);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(416, 25);
+            this.lbEmail.TabIndex = 53;
+            this.lbEmail.Text = "Email:";
+            // 
+            // lbGioiTinh
+            // 
+            this.lbGioiTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGioiTinh.Location = new System.Drawing.Point(390, 185);
+            this.lbGioiTinh.Name = "lbGioiTinh";
+            this.lbGioiTinh.Size = new System.Drawing.Size(416, 25);
+            this.lbGioiTinh.TabIndex = 52;
+            this.lbGioiTinh.Text = "Giới Tính:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rdoNam);
+            this.panel1.Controls.Add(this.rdoNu);
+            this.panel1.ForeColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(395, 213);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(414, 33);
+            this.panel1.TabIndex = 51;
+            // 
+            // rdoNam
+            // 
+            this.rdoNam.AutoSize = true;
+            this.rdoNam.Checked = true;
+            this.rdoNam.Location = new System.Drawing.Point(3, 3);
+            this.rdoNam.Name = "rdoNam";
+            this.rdoNam.Size = new System.Drawing.Size(70, 27);
+            this.rdoNam.TabIndex = 40;
+            this.rdoNam.TabStop = true;
+            this.rdoNam.Text = "Nam";
+            this.rdoNam.UseVisualStyleBackColor = true;
+            // 
+            // rdoNu
+            // 
+            this.rdoNu.AutoSize = true;
+            this.rdoNu.Location = new System.Drawing.Point(125, 3);
+            this.rdoNu.Name = "rdoNu";
+            this.rdoNu.Size = new System.Drawing.Size(57, 27);
+            this.rdoNu.TabIndex = 39;
+            this.rdoNu.TabStop = true;
+            this.rdoNu.Text = "Nữ";
+            this.rdoNu.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePickerNVL
+            // 
+            this.dateTimePickerNVL.CalendarForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNVL.CalendarMonthBackground = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNVL.CalendarTitleBackColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNVL.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNVL.CalendarTrailingForeColor = System.Drawing.Color.RoyalBlue;
+            this.dateTimePickerNVL.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerNVL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerNVL.Location = new System.Drawing.Point(391, 526);
+            this.dateTimePickerNVL.Name = "dateTimePickerNVL";
+            this.dateTimePickerNVL.Size = new System.Drawing.Size(414, 30);
+            this.dateTimePickerNVL.TabIndex = 50;
+            this.dateTimePickerNVL.Value = new System.DateTime(2021, 1, 27, 0, 0, 0, 0);
             // 
             // txtCMND
             // 
@@ -247,14 +338,14 @@
             this.dagirdDanhSachThuThu.AllowUserToDeleteRows = false;
             this.dagirdDanhSachThuThu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dagirdDanhSachThuThu.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dagirdDanhSachThuThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dagirdDanhSachThuThu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dagirdDanhSachThuThu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dagirdDanhSachThuThu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -266,212 +357,38 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn11});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dagirdDanhSachThuThu.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dagirdDanhSachThuThu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dagirdDanhSachThuThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dagirdDanhSachThuThu.Location = new System.Drawing.Point(3, 43);
             this.dagirdDanhSachThuThu.Name = "dagirdDanhSachThuThu";
             this.dagirdDanhSachThuThu.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dagirdDanhSachThuThu.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dagirdDanhSachThuThu.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dagirdDanhSachThuThu.RowHeadersWidth = 51;
             this.dagirdDanhSachThuThu.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.RoyalBlue;
             this.dagirdDanhSachThuThu.RowTemplate.Height = 24;
             this.dagirdDanhSachThuThu.Size = new System.Drawing.Size(1281, 671);
             this.dagirdDanhSachThuThu.TabIndex = 12;
             // 
-            // tableLayoutPanelTimKiem
-            // 
-            this.tableLayoutPanelTimKiem.ColumnCount = 5;
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
-            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
-            this.tableLayoutPanelTimKiem.Controls.Add(this.txtTim, 1, 0);
-            this.tableLayoutPanelTimKiem.Controls.Add(this.btnTim, 2, 0);
-            this.tableLayoutPanelTimKiem.Controls.Add(this.btnXemChiTietThuThu, 3, 0);
-            this.tableLayoutPanelTimKiem.Controls.Add(this.btnLoadAll, 0, 0);
-            this.tableLayoutPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanelTimKiem.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanelTimKiem.Name = "tableLayoutPanelTimKiem";
-            this.tableLayoutPanelTimKiem.RowCount = 1;
-            this.tableLayoutPanelTimKiem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanelTimKiem.Size = new System.Drawing.Size(1281, 40);
-            this.tableLayoutPanelTimKiem.TabIndex = 20;
-            // 
-            // txtTim
-            // 
-            this.txtTim.BackColor = System.Drawing.Color.White;
-            this.txtTim.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtTim.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtTim.Location = new System.Drawing.Point(84, 3);
-            this.txtTim.Name = "txtTim";
-            this.txtTim.Size = new System.Drawing.Size(216, 30);
-            this.txtTim.TabIndex = 18;
-            // 
-            // btnTim
-            // 
-            this.btnTim.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnTim.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(306, 3);
-            this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(141, 33);
-            this.btnTim.TabIndex = 19;
-            this.btnTim.Text = "Tìm kiếm";
-            this.btnTim.UseVisualStyleBackColor = false;
-            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
-            // 
-            // btnXemChiTietThuThu
-            // 
-            this.btnXemChiTietThuThu.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnXemChiTietThuThu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXemChiTietThuThu.ForeColor = System.Drawing.Color.White;
-            this.btnXemChiTietThuThu.Location = new System.Drawing.Point(453, 3);
-            this.btnXemChiTietThuThu.Name = "btnXemChiTietThuThu";
-            this.btnXemChiTietThuThu.Size = new System.Drawing.Size(162, 33);
-            this.btnXemChiTietThuThu.TabIndex = 15;
-            this.btnXemChiTietThuThu.Text = "Xem chi tiết";
-            this.btnXemChiTietThuThu.UseVisualStyleBackColor = false;
-            this.btnXemChiTietThuThu.Click += new System.EventHandler(this.btnXemChiTietThuThu_Click);
-            // 
-            // btnLoadAll
-            // 
-            this.btnLoadAll.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnLoadAll.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoadAll.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadAll.ForeColor = System.Drawing.Color.White;
-            this.btnLoadAll.Location = new System.Drawing.Point(3, 3);
-            this.btnLoadAll.Name = "btnLoadAll";
-            this.btnLoadAll.Size = new System.Drawing.Size(75, 33);
-            this.btnLoadAll.TabIndex = 20;
-            this.btnLoadAll.Text = "Load";
-            this.btnLoadAll.UseVisualStyleBackColor = false;
-            this.btnLoadAll.Click += new System.EventHandler(this.btnLoadAll_Click);
-            // 
-            // tabPageThemTT
-            // 
-            this.tabPageThemTT.Controls.Add(this.gpboxNhapTT);
-            this.tabPageThemTT.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.tabPageThemTT.Location = new System.Drawing.Point(4, 32);
-            this.tabPageThemTT.Name = "tabPageThemTT";
-            this.tabPageThemTT.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageThemTT.Size = new System.Drawing.Size(1287, 717);
-            this.tabPageThemTT.TabIndex = 1;
-            this.tabPageThemTT.Text = "Thêm thủ thư";
-            this.tabPageThemTT.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePickerNVL
-            // 
-            this.dateTimePickerNVL.CalendarForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNVL.CalendarMonthBackground = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNVL.CalendarTitleBackColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNVL.CalendarTitleForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNVL.CalendarTrailingForeColor = System.Drawing.Color.RoyalBlue;
-            this.dateTimePickerNVL.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePickerNVL.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerNVL.Location = new System.Drawing.Point(391, 526);
-            this.dateTimePickerNVL.Name = "dateTimePickerNVL";
-            this.dateTimePickerNVL.Size = new System.Drawing.Size(414, 30);
-            this.dateTimePickerNVL.TabIndex = 50;
-            this.dateTimePickerNVL.Value = new System.DateTime(2021, 1, 27, 0, 0, 0, 0);
-            // 
-            // lbGioiTinh
-            // 
-            this.lbGioiTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGioiTinh.Location = new System.Drawing.Point(390, 185);
-            this.lbGioiTinh.Name = "lbGioiTinh";
-            this.lbGioiTinh.Size = new System.Drawing.Size(416, 25);
-            this.lbGioiTinh.TabIndex = 52;
-            this.lbGioiTinh.Text = "Giới Tính:";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.rdoNam);
-            this.panel1.Controls.Add(this.rdoNu);
-            this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(395, 213);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 33);
-            this.panel1.TabIndex = 51;
-            // 
-            // rdoNam
-            // 
-            this.rdoNam.AutoSize = true;
-            this.rdoNam.Checked = true;
-            this.rdoNam.Location = new System.Drawing.Point(3, 3);
-            this.rdoNam.Name = "rdoNam";
-            this.rdoNam.Size = new System.Drawing.Size(70, 27);
-            this.rdoNam.TabIndex = 40;
-            this.rdoNam.TabStop = true;
-            this.rdoNam.Text = "Nam";
-            this.rdoNam.UseVisualStyleBackColor = true;
-            // 
-            // rdoNu
-            // 
-            this.rdoNu.AutoSize = true;
-            this.rdoNu.Location = new System.Drawing.Point(125, 3);
-            this.rdoNu.Name = "rdoNu";
-            this.rdoNu.Size = new System.Drawing.Size(57, 27);
-            this.rdoNu.TabIndex = 39;
-            this.rdoNu.TabStop = true;
-            this.rdoNu.Text = "Nữ";
-            this.rdoNu.UseVisualStyleBackColor = true;
-            // 
-            // txtEmai
-            // 
-            this.txtEmai.ForeColor = System.Drawing.Color.Black;
-            this.txtEmai.Location = new System.Drawing.Point(392, 287);
-            this.txtEmai.Name = "txtEmai";
-            this.txtEmai.Size = new System.Drawing.Size(414, 30);
-            this.txtEmai.TabIndex = 54;
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmail.Location = new System.Drawing.Point(387, 259);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(416, 25);
-            this.lbEmail.TabIndex = 53;
-            this.lbEmail.Text = "Email:";
-            // 
-            // txtSoDT
-            // 
-            this.txtSoDT.ForeColor = System.Drawing.Color.Black;
-            this.txtSoDT.Location = new System.Drawing.Point(392, 348);
-            this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Size = new System.Drawing.Size(414, 30);
-            this.txtSoDT.TabIndex = 56;
-            // 
-            // lbSDT
-            // 
-            this.lbSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSDT.Location = new System.Drawing.Point(387, 320);
-            this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(419, 25);
-            this.lbSDT.TabIndex = 55;
-            this.lbSDT.Text = "Số Điện Thoại:";
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "ID";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            this.ID.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -550,6 +467,89 @@
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 153;
             // 
+            // tableLayoutPanelTimKiem
+            // 
+            this.tableLayoutPanelTimKiem.ColumnCount = 5;
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.85185F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.14815F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 168F));
+            this.tableLayoutPanelTimKiem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 663F));
+            this.tableLayoutPanelTimKiem.Controls.Add(this.txtTim, 1, 0);
+            this.tableLayoutPanelTimKiem.Controls.Add(this.btnTim, 2, 0);
+            this.tableLayoutPanelTimKiem.Controls.Add(this.btnXemChiTietThuThu, 3, 0);
+            this.tableLayoutPanelTimKiem.Controls.Add(this.btnLoadAll, 0, 0);
+            this.tableLayoutPanelTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanelTimKiem.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanelTimKiem.Name = "tableLayoutPanelTimKiem";
+            this.tableLayoutPanelTimKiem.RowCount = 1;
+            this.tableLayoutPanelTimKiem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelTimKiem.Size = new System.Drawing.Size(1281, 40);
+            this.tableLayoutPanelTimKiem.TabIndex = 20;
+            // 
+            // txtTim
+            // 
+            this.txtTim.BackColor = System.Drawing.Color.White;
+            this.txtTim.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtTim.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtTim.Location = new System.Drawing.Point(84, 3);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(215, 30);
+            this.txtTim.TabIndex = 18;
+            // 
+            // btnTim
+            // 
+            this.btnTim.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnTim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTim.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTim.ForeColor = System.Drawing.Color.White;
+            this.btnTim.Location = new System.Drawing.Point(305, 3);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(141, 33);
+            this.btnTim.TabIndex = 19;
+            this.btnTim.Text = "Tìm kiếm";
+            this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // btnXemChiTietThuThu
+            // 
+            this.btnXemChiTietThuThu.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnXemChiTietThuThu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnXemChiTietThuThu.ForeColor = System.Drawing.Color.White;
+            this.btnXemChiTietThuThu.Location = new System.Drawing.Point(452, 3);
+            this.btnXemChiTietThuThu.Name = "btnXemChiTietThuThu";
+            this.btnXemChiTietThuThu.Size = new System.Drawing.Size(162, 33);
+            this.btnXemChiTietThuThu.TabIndex = 15;
+            this.btnXemChiTietThuThu.Text = "Xem chi tiết";
+            this.btnXemChiTietThuThu.UseVisualStyleBackColor = false;
+            this.btnXemChiTietThuThu.Click += new System.EventHandler(this.btnXemChiTietThuThu_Click);
+            // 
+            // btnLoadAll
+            // 
+            this.btnLoadAll.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnLoadAll.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoadAll.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadAll.ForeColor = System.Drawing.Color.White;
+            this.btnLoadAll.Location = new System.Drawing.Point(3, 3);
+            this.btnLoadAll.Name = "btnLoadAll";
+            this.btnLoadAll.Size = new System.Drawing.Size(75, 33);
+            this.btnLoadAll.TabIndex = 20;
+            this.btnLoadAll.Text = "Load";
+            this.btnLoadAll.UseVisualStyleBackColor = false;
+            this.btnLoadAll.Click += new System.EventHandler(this.btnLoadAll_Click);
+            // 
+            // tabPageThemTT
+            // 
+            this.tabPageThemTT.Controls.Add(this.gpboxNhapTT);
+            this.tabPageThemTT.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.tabPageThemTT.Location = new System.Drawing.Point(4, 32);
+            this.tabPageThemTT.Name = "tabPageThemTT";
+            this.tabPageThemTT.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageThemTT.Size = new System.Drawing.Size(1287, 717);
+            this.tabPageThemTT.TabIndex = 1;
+            this.tabPageThemTT.Text = "Thêm thủ thư";
+            this.tabPageThemTT.UseVisualStyleBackColor = true;
+            // 
             // UserCtrlThongTinThuThu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -563,6 +563,8 @@
             this.Load += new System.EventHandler(this.UserCtrlThongTinThuThu_Load);
             this.pnNhapTT.ResumeLayout(false);
             this.pnNhapTT.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.gpboxNhapTT.ResumeLayout(false);
             this.tabCtrolQuanLyThuThu.ResumeLayout(false);
             this.tabPageThongTinThuThu.ResumeLayout(false);
@@ -570,8 +572,6 @@
             this.tableLayoutPanelTimKiem.ResumeLayout(false);
             this.tableLayoutPanelTimKiem.PerformLayout();
             this.tabPageThemTT.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

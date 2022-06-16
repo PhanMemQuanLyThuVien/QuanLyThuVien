@@ -63,19 +63,19 @@ namespace DTO
     partial void InsertPHIEUPHAT(PHIEUPHAT instance);
     partial void UpdatePHIEUPHAT(PHIEUPHAT instance);
     partial void DeletePHIEUPHAT(PHIEUPHAT instance);
+    partial void InsertSACH(SACH instance);
+    partial void UpdateSACH(SACH instance);
+    partial void DeleteSACH(SACH instance);
     partial void InsertTACGIA(TACGIA instance);
     partial void UpdateTACGIA(TACGIA instance);
     partial void DeleteTACGIA(TACGIA instance);
     partial void InsertTAIKHOAN(TAIKHOAN instance);
     partial void UpdateTAIKHOAN(TAIKHOAN instance);
     partial void DeleteTAIKHOAN(TAIKHOAN instance);
-    partial void InsertSACH(SACH instance);
-    partial void UpdateSACH(SACH instance);
-    partial void DeleteSACH(SACH instance);
     #endregion
 		
 		public QuanLyThuVienDataContext() : 
-				base(global::DTO.Properties.Settings.Default.QUANLYTHUVIENConnectionString, mappingSource)
+				base(global::DTO.Properties.Settings.Default.QUANLYTHUVIENConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -192,6 +192,14 @@ namespace DTO
 			}
 		}
 		
+		public System.Data.Linq.Table<SACH> SACHes
+		{
+			get
+			{
+				return this.GetTable<SACH>();
+			}
+		}
+		
 		public System.Data.Linq.Table<TACGIA> TACGIAs
 		{
 			get
@@ -205,14 +213,6 @@ namespace DTO
 			get
 			{
 				return this.GetTable<TAIKHOAN>();
-			}
-		}
-		
-		public System.Data.Linq.Table<SACH> SACHes
-		{
-			get
-			{
-				return this.GetTable<SACH>();
 			}
 		}
 		
@@ -432,7 +432,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYMUON", DbType="DateTime NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYMUON", DbType="Date NOT NULL")]
 		public System.DateTime NGAYMUON
 		{
 			get
@@ -452,7 +452,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HANTRA", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HANTRA", DbType="Date")]
 		public System.Nullable<System.DateTime> HANTRA
 		{
 			get
@@ -1125,7 +1125,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYSINH", DbType="DateTime")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYSINH", DbType="Date")]
 		public System.Nullable<System.DateTime> NGAYSINH
 		{
 			get
@@ -1758,8 +1758,6 @@ namespace DTO
 		
 		private EntitySet<PHIEUPHAT> _PHIEUPHATs;
 		
-		private EntityRef<TAIKHOAN> _TAIKHOAN;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1789,7 +1787,6 @@ namespace DTO
 			this._CHITIETMUONTRAs = new EntitySet<CHITIETMUONTRA>(new Action<CHITIETMUONTRA>(this.attach_CHITIETMUONTRAs), new Action<CHITIETMUONTRA>(this.detach_CHITIETMUONTRAs));
 			this._CHITIETMUONTRAs1 = new EntitySet<CHITIETMUONTRA>(new Action<CHITIETMUONTRA>(this.attach_CHITIETMUONTRAs1), new Action<CHITIETMUONTRA>(this.detach_CHITIETMUONTRAs1));
 			this._PHIEUPHATs = new EntitySet<PHIEUPHAT>(new Action<PHIEUPHAT>(this.attach_PHIEUPHATs), new Action<PHIEUPHAT>(this.detach_PHIEUPHATs));
-			this._TAIKHOAN = default(EntityRef<TAIKHOAN>);
 			OnCreated();
 		}
 		
@@ -1884,10 +1881,6 @@ namespace DTO
 			{
 				if ((this._EMAIL != value))
 				{
-					if (this._TAIKHOAN.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnEMAILChanging(value);
 					this.SendPropertyChanging();
 					this._EMAIL = value;
@@ -2013,40 +2006,6 @@ namespace DTO
 			set
 			{
 				this._PHIEUPHATs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_NHANVIEN", Storage="_TAIKHOAN", ThisKey="EMAIL", OtherKey="EMAIL", IsForeignKey=true)]
-		public TAIKHOAN TAIKHOAN
-		{
-			get
-			{
-				return this._TAIKHOAN.Entity;
-			}
-			set
-			{
-				TAIKHOAN previousValue = this._TAIKHOAN.Entity;
-				if (((previousValue != value) 
-							|| (this._TAIKHOAN.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TAIKHOAN.Entity = null;
-						previousValue.NHANVIENs.Remove(this);
-					}
-					this._TAIKHOAN.Entity = value;
-					if ((value != null))
-					{
-						value.NHANVIENs.Add(this);
-						this._EMAIL = value.EMAIL;
-					}
-					else
-					{
-						this._EMAIL = default(string);
-					}
-					this.SendPropertyChanged("TAIKHOAN");
-				}
 			}
 		}
 		
@@ -2191,7 +2150,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SODT", DbType="NChar(20)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SODT", DbType="VarChar(20)")]
 		public string SODT
 		{
 			get
@@ -2231,7 +2190,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(50)")]
 		public string EMAIL
 		{
 			get
@@ -2251,7 +2210,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WEBSITE", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WEBSITE", DbType="VarChar(50)")]
 		public string WEBSITE
 		{
 			get
@@ -2628,7 +2587,7 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYLAPPHIEU", DbType="DateTime NOT NULL")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NGAYLAPPHIEU", DbType="Date NOT NULL")]
 		public System.DateTime NGAYLAPPHIEU
 		{
 			get
@@ -2797,299 +2756,6 @@ namespace DTO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TACGIA")]
-	public partial class TACGIA : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID;
-		
-		private string _BUTDANH;
-		
-		private EntitySet<SACH> _SACHes;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnBUTDANHChanging(string value);
-    partial void OnBUTDANHChanged();
-    #endregion
-		
-		public TACGIA()
-		{
-			this._SACHes = new EntitySet<SACH>(new Action<SACH>(this.attach_SACHes), new Action<SACH>(this.detach_SACHes));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this.OnIDChanging(value);
-					this.SendPropertyChanging();
-					this._ID = value;
-					this.SendPropertyChanged("ID");
-					this.OnIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUTDANH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string BUTDANH
-		{
-			get
-			{
-				return this._BUTDANH;
-			}
-			set
-			{
-				if ((this._BUTDANH != value))
-				{
-					this.OnBUTDANHChanging(value);
-					this.SendPropertyChanging();
-					this._BUTDANH = value;
-					this.SendPropertyChanged("BUTDANH");
-					this.OnBUTDANHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TACGIA_SACH", Storage="_SACHes", ThisKey="ID", OtherKey="IDTACGIA")]
-		public EntitySet<SACH> SACHes
-		{
-			get
-			{
-				return this._SACHes;
-			}
-			set
-			{
-				this._SACHes.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_SACHes(SACH entity)
-		{
-			this.SendPropertyChanging();
-			entity.TACGIA = this;
-		}
-		
-		private void detach_SACHes(SACH entity)
-		{
-			this.SendPropertyChanging();
-			entity.TACGIA = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TAIKHOAN")]
-	public partial class TAIKHOAN : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _EMAIL;
-		
-		private string _MATKHAU;
-		
-		private int _CHUCVU;
-		
-		private EntitySet<NHANVIEN> _NHANVIENs;
-		
-		private EntityRef<CHUCVU> _CHUCVU1;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEMAILChanging(string value);
-    partial void OnEMAILChanged();
-    partial void OnMATKHAUChanging(string value);
-    partial void OnMATKHAUChanged();
-    partial void OnCHUCVUChanging(int value);
-    partial void OnCHUCVUChanged();
-    #endregion
-		
-		public TAIKHOAN()
-		{
-			this._NHANVIENs = new EntitySet<NHANVIEN>(new Action<NHANVIEN>(this.attach_NHANVIENs), new Action<NHANVIEN>(this.detach_NHANVIENs));
-			this._CHUCVU1 = default(EntityRef<CHUCVU>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string EMAIL
-		{
-			get
-			{
-				return this._EMAIL;
-			}
-			set
-			{
-				if ((this._EMAIL != value))
-				{
-					this.OnEMAILChanging(value);
-					this.SendPropertyChanging();
-					this._EMAIL = value;
-					this.SendPropertyChanged("EMAIL");
-					this.OnEMAILChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="NChar(50) NOT NULL", CanBeNull=false)]
-		public string MATKHAU
-		{
-			get
-			{
-				return this._MATKHAU;
-			}
-			set
-			{
-				if ((this._MATKHAU != value))
-				{
-					this.OnMATKHAUChanging(value);
-					this.SendPropertyChanging();
-					this._MATKHAU = value;
-					this.SendPropertyChanged("MATKHAU");
-					this.OnMATKHAUChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CHUCVU", DbType="Int NOT NULL")]
-		public int CHUCVU
-		{
-			get
-			{
-				return this._CHUCVU;
-			}
-			set
-			{
-				if ((this._CHUCVU != value))
-				{
-					if (this._CHUCVU1.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnCHUCVUChanging(value);
-					this.SendPropertyChanging();
-					this._CHUCVU = value;
-					this.SendPropertyChanged("CHUCVU");
-					this.OnCHUCVUChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_NHANVIEN", Storage="_NHANVIENs", ThisKey="EMAIL", OtherKey="EMAIL")]
-		public EntitySet<NHANVIEN> NHANVIENs
-		{
-			get
-			{
-				return this._NHANVIENs;
-			}
-			set
-			{
-				this._NHANVIENs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHUCVU_TAIKHOAN", Storage="_CHUCVU1", ThisKey="CHUCVU", OtherKey="ID", IsForeignKey=true)]
-		public CHUCVU CHUCVU1
-		{
-			get
-			{
-				return this._CHUCVU1.Entity;
-			}
-			set
-			{
-				CHUCVU previousValue = this._CHUCVU1.Entity;
-				if (((previousValue != value) 
-							|| (this._CHUCVU1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._CHUCVU1.Entity = null;
-						previousValue.TAIKHOANs.Remove(this);
-					}
-					this._CHUCVU1.Entity = value;
-					if ((value != null))
-					{
-						value.TAIKHOANs.Add(this);
-						this._CHUCVU = value.ID;
-					}
-					else
-					{
-						this._CHUCVU = default(int);
-					}
-					this.SendPropertyChanged("CHUCVU1");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_NHANVIENs(NHANVIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.TAIKHOAN = this;
-		}
-		
-		private void detach_NHANVIENs(NHANVIEN entity)
-		{
-			this.SendPropertyChanging();
-			entity.TAIKHOAN = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.SACH")]
 	public partial class SACH : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3120,9 +2786,9 @@ namespace DTO
 		
 		private EntityRef<NHAXUATBAN> _NHAXUATBAN;
 		
-		private EntityRef<TACGIA> _TACGIA;
-		
 		private EntityRef<THELOAI> _THELOAI;
+		
+		private EntityRef<TACGIA> _TACGIA;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3154,8 +2820,8 @@ namespace DTO
 		{
 			this._CHITIETMUONTRAs = new EntitySet<CHITIETMUONTRA>(new Action<CHITIETMUONTRA>(this.attach_CHITIETMUONTRAs), new Action<CHITIETMUONTRA>(this.detach_CHITIETMUONTRAs));
 			this._NHAXUATBAN = default(EntityRef<NHAXUATBAN>);
-			this._TACGIA = default(EntityRef<TACGIA>);
 			this._THELOAI = default(EntityRef<THELOAI>);
+			this._TACGIA = default(EntityRef<TACGIA>);
 			OnCreated();
 		}
 		
@@ -3418,40 +3084,6 @@ namespace DTO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TACGIA_SACH", Storage="_TACGIA", ThisKey="IDTACGIA", OtherKey="ID", IsForeignKey=true)]
-		public TACGIA TACGIA
-		{
-			get
-			{
-				return this._TACGIA.Entity;
-			}
-			set
-			{
-				TACGIA previousValue = this._TACGIA.Entity;
-				if (((previousValue != value) 
-							|| (this._TACGIA.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TACGIA.Entity = null;
-						previousValue.SACHes.Remove(this);
-					}
-					this._TACGIA.Entity = value;
-					if ((value != null))
-					{
-						value.SACHes.Add(this);
-						this._IDTACGIA = value.ID;
-					}
-					else
-					{
-						this._IDTACGIA = default(int);
-					}
-					this.SendPropertyChanged("TACGIA");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="THELOAI_SACH", Storage="_THELOAI", ThisKey="IDTHELOAI", OtherKey="ID", IsForeignKey=true)]
 		public THELOAI THELOAI
 		{
@@ -3486,6 +3118,40 @@ namespace DTO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TACGIA_SACH", Storage="_TACGIA", ThisKey="IDTACGIA", OtherKey="ID", IsForeignKey=true)]
+		public TACGIA TACGIA
+		{
+			get
+			{
+				return this._TACGIA.Entity;
+			}
+			set
+			{
+				TACGIA previousValue = this._TACGIA.Entity;
+				if (((previousValue != value) 
+							|| (this._TACGIA.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TACGIA.Entity = null;
+						previousValue.SACHes.Remove(this);
+					}
+					this._TACGIA.Entity = value;
+					if ((value != null))
+					{
+						value.SACHes.Add(this);
+						this._IDTACGIA = value.ID;
+					}
+					else
+					{
+						this._IDTACGIA = default(int);
+					}
+					this.SendPropertyChanged("TACGIA");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -3516,6 +3182,295 @@ namespace DTO
 		{
 			this.SendPropertyChanging();
 			entity.SACH = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TACGIA")]
+	public partial class TACGIA : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _BUTDANH;
+		
+		private EntitySet<SACH> _SACHes;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnBUTDANHChanging(string value);
+    partial void OnBUTDANHChanged();
+    #endregion
+		
+		public TACGIA()
+		{
+			this._SACHes = new EntitySet<SACH>(new Action<SACH>(this.attach_SACHes), new Action<SACH>(this.detach_SACHes));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BUTDANH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string BUTDANH
+		{
+			get
+			{
+				return this._BUTDANH;
+			}
+			set
+			{
+				if ((this._BUTDANH != value))
+				{
+					this.OnBUTDANHChanging(value);
+					this.SendPropertyChanging();
+					this._BUTDANH = value;
+					this.SendPropertyChanged("BUTDANH");
+					this.OnBUTDANHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TACGIA_SACH", Storage="_SACHes", ThisKey="ID", OtherKey="IDTACGIA")]
+		public EntitySet<SACH> SACHes
+		{
+			get
+			{
+				return this._SACHes;
+			}
+			set
+			{
+				this._SACHes.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_SACHes(SACH entity)
+		{
+			this.SendPropertyChanging();
+			entity.TACGIA = this;
+		}
+		
+		private void detach_SACHes(SACH entity)
+		{
+			this.SendPropertyChanging();
+			entity.TACGIA = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TAIKHOAN")]
+	public partial class TAIKHOAN : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _EMAIL;
+		
+		private string _MATKHAU;
+		
+		private bool _TRANGTHAI;
+		
+		private int _CHUCVU;
+		
+		private EntityRef<CHUCVU> _CHUCVU1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEMAILChanging(string value);
+    partial void OnEMAILChanged();
+    partial void OnMATKHAUChanging(string value);
+    partial void OnMATKHAUChanged();
+    partial void OnTRANGTHAIChanging(bool value);
+    partial void OnTRANGTHAIChanged();
+    partial void OnCHUCVUChanging(int value);
+    partial void OnCHUCVUChanged();
+    #endregion
+		
+		public TAIKHOAN()
+		{
+			this._CHUCVU1 = default(EntityRef<CHUCVU>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="NVarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string EMAIL
+		{
+			get
+			{
+				return this._EMAIL;
+			}
+			set
+			{
+				if ((this._EMAIL != value))
+				{
+					this.OnEMAILChanging(value);
+					this.SendPropertyChanging();
+					this._EMAIL = value;
+					this.SendPropertyChanged("EMAIL");
+					this.OnEMAILChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MATKHAU", DbType="NChar(50) NOT NULL", CanBeNull=false)]
+		public string MATKHAU
+		{
+			get
+			{
+				return this._MATKHAU;
+			}
+			set
+			{
+				if ((this._MATKHAU != value))
+				{
+					this.OnMATKHAUChanging(value);
+					this.SendPropertyChanging();
+					this._MATKHAU = value;
+					this.SendPropertyChanged("MATKHAU");
+					this.OnMATKHAUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TRANGTHAI", DbType="Bit NOT NULL")]
+		public bool TRANGTHAI
+		{
+			get
+			{
+				return this._TRANGTHAI;
+			}
+			set
+			{
+				if ((this._TRANGTHAI != value))
+				{
+					this.OnTRANGTHAIChanging(value);
+					this.SendPropertyChanging();
+					this._TRANGTHAI = value;
+					this.SendPropertyChanged("TRANGTHAI");
+					this.OnTRANGTHAIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CHUCVU", DbType="Int NOT NULL")]
+		public int CHUCVU
+		{
+			get
+			{
+				return this._CHUCVU;
+			}
+			set
+			{
+				if ((this._CHUCVU != value))
+				{
+					if (this._CHUCVU1.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnCHUCVUChanging(value);
+					this.SendPropertyChanging();
+					this._CHUCVU = value;
+					this.SendPropertyChanged("CHUCVU");
+					this.OnCHUCVUChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="CHUCVU_TAIKHOAN", Storage="_CHUCVU1", ThisKey="CHUCVU", OtherKey="ID", IsForeignKey=true)]
+		public CHUCVU CHUCVU1
+		{
+			get
+			{
+				return this._CHUCVU1.Entity;
+			}
+			set
+			{
+				CHUCVU previousValue = this._CHUCVU1.Entity;
+				if (((previousValue != value) 
+							|| (this._CHUCVU1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._CHUCVU1.Entity = null;
+						previousValue.TAIKHOANs.Remove(this);
+					}
+					this._CHUCVU1.Entity = value;
+					if ((value != null))
+					{
+						value.TAIKHOANs.Add(this);
+						this._CHUCVU = value.ID;
+					}
+					else
+					{
+						this._CHUCVU = default(int);
+					}
+					this.SendPropertyChanged("CHUCVU1");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
